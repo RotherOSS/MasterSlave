@@ -86,7 +86,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Defines if the MasterSlave note is visible for the customer by default."
-msgstr ""
+msgstr "Определяет, будет ли запись MasterSlave видна клиенту по умолчанию."
 
 #. SysConfig
 msgid ""
@@ -250,7 +250,7 @@ msgstr ""
 
 #. SysConfig
 msgid "Sets if Master / Slave field must be selected by the agent."
-msgstr ""
+msgstr "Устанавливает, должно ли поле Master / Slave быть выбрано агентом."
 
 #. SysConfig
 msgid ""
@@ -338,6 +338,8 @@ msgid ""
 "Shows the title field in the ticket MasterSlave screen of a zoomed ticket in "
 "the agent interface."
 msgstr ""
+"Показывает поле заголовка на экране билет MasterSlave увеличенного билета в "
+"интерфейсе агента."
 
 #. SysConfig
 msgid "Slave Tickets"
@@ -348,6 +350,8 @@ msgid ""
 "Specifies the different article communication channels where the real name "
 "from Master ticket will be replaced with the one in the Slave ticket."
 msgstr ""
+"Указывает различные каналы связи артикулов, в которых реальное имя из билета "
+"Master будет заменено на имя в билете Slave."
 
 #. SysConfig
 msgid ""
@@ -362,6 +366,7 @@ msgid ""
 "This setting is deprecated and will be removed in further versions of "
 "MasterSlave."
 msgstr ""
+"Этот параметр устарел и будет удален в последующих версиях MasterSlave."
 
 #. SysConfig
 msgid "Ticket MasterSlave."
