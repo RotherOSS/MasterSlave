@@ -44,7 +44,7 @@ msgstr "マスター"
 
 #. Perl Module: Kernel/System/DynamicField/Driver/MasterSlave.pm
 msgid "Slave of %s%s%s"
-msgstr ""
+msgstr "%s%s%s のスレーブ"
 
 #. Perl Module: Kernel/System/DynamicField/Driver/MasterSlave.pm
 msgid "Master Ticket"
@@ -59,76 +59,138 @@ msgid "All slave tickets"
 msgstr "すべてのスレーブチケット"
 
 #. SysConfig
-msgid "Allows adding notes in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
-msgstr "エージェントインタフェースのズームされたチケットのマスタースレイブ画面で、注釈の追加を許可します。"
+msgid ""
+"Allows adding notes in the ticket MasterSlave screen of a zoomed ticket in "
+"the agent interface."
+msgstr ""
+"エージェントインタフェースのズームされたチケットのマスタースレイブ画面で、注"
+"釈の追加を許可します。"
 
 #. SysConfig
 msgid "Change the MasterSlave state of the ticket."
-msgstr "チケットのマスター・スレーブ状況を変更する"
+msgstr "チケットのマスター・スレーブのステータスを変更する。"
 
 #. SysConfig
 msgid "Defines dynamic field name for master ticket feature."
-msgstr "マスター・スレーブ動的フィールド名を設定する"
+msgstr "マスター・スレーブのダイナミック・フィールド名を設定する。"
 
 #. SysConfig
-msgid "Defines if a ticket lock is required in the ticket MasterSlave screen of a zoomed ticket in the agent interface (if the ticket isn't locked yet, the ticket gets locked and the current agent will be set automatically as its owner)."
+msgid ""
+"Defines if a ticket lock is required in the ticket MasterSlave screen of a "
+"zoomed ticket in the agent interface (if the ticket isn't locked yet, the "
+"ticket gets locked and the current agent will be set automatically as its "
+"owner)."
 msgstr ""
+"担当者インターフェイスのズームされたチケットのチケット マスタースレーブ画面で"
+"チケット ロックが必要かどうかを定義します。 (チケットがまだロックされていない"
+"場合、チケットはロックされ、現在の担当者が所有者として自動的に設定されます。)"
 
 #. SysConfig
 msgid "Defines if the MasterSlave note is visible for the customer by default."
 msgstr ""
+"マスタースレーブのメモがデフォルトで顧客に表示されるかどうかを定義します。"
 
 #. SysConfig
-msgid "Defines the default next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgid ""
+"Defines the default next state of a ticket after adding a note, in the "
+"ticket MasterSlave screen of a zoomed ticket in the agent interface."
 msgstr ""
+"担当者インターフェイスのズームされたチケットのチケットマスタースレーブ画面"
+"で、メモを追加した後のチケットのデフォルトの次の状態を定義します。"
 
 #. SysConfig
-msgid "Defines the default ticket priority in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
-msgstr "担当者インターフェイス のズームされたチケットのマスター・スレーブ画面で、デフォルトの チケット 優先度を定義します。"
-
-#. SysConfig
-msgid "Defines the history comment for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface."
-msgstr "担当者インタフェースのチケット履歴で使用される、チケット・マスター・スレーブ画面アクションに関する履歴コメントを定義します。"
-
-#. SysConfig
-msgid "Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface."
-msgstr "担当者インタフェースのチケット履歴で使用される、チケット・マスター・スレーブ画面アクションに関する履歴タイプを定義します。"
-
-#. SysConfig
-msgid "Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgid ""
+"Defines the default ticket priority in the ticket MasterSlave screen of a "
+"zoomed ticket in the agent interface."
 msgstr ""
+"担当者インターフェイス のズームされたチケットのマスター・スレーブ画面で、デ"
+"フォルトの チケット 優先度を定義します。"
+
+#. SysConfig
+msgid ""
+"Defines the history comment for the ticket MasterSlave screen action, which "
+"gets used for ticket history in the agent interface."
+msgstr ""
+"担当者インタフェースのチケット履歴で使用される、チケット・マスター・スレーブ"
+"画面アクションに関する履歴コメントを定義します。"
+
+#. SysConfig
+msgid ""
+"Defines the history type for the ticket MasterSlave screen action, which "
+"gets used for ticket history in the agent interface."
+msgstr ""
+"担当者インタフェースのチケット履歴で使用される、チケット・マスター・スレーブ"
+"画面アクションに関する履歴タイプを定義します。"
+
+#. SysConfig
+msgid ""
+"Defines the next state of a ticket after adding a note, in the ticket "
+"MasterSlave screen of a zoomed ticket in the agent interface."
+msgstr ""
+"担当者インターフェイスのズームされたチケットのチケットマスタースレーブ画面"
+"で、メモを追加した後のチケットの次の状態を定義します。"
 
 #. SysConfig
 msgid "Enables the advanced MasterSlave part of the feature."
-msgstr ""
+msgstr "機能の高度なマスタースレーブ部分を有効にします。"
 
 #. SysConfig
-msgid "Enables the feature that slave tickets follow the master ticket to a new master in the advanced MasterSlave mode."
+msgid ""
+"Enables the feature that slave tickets follow the master ticket to a new "
+"master in the advanced MasterSlave mode."
 msgstr ""
+"高度なマスタースレーブ モードで、スレーブ チケットがマスター チケットをたどっ"
+"て新しいマスターに到達する機能を有効にします。"
 
 #. SysConfig
-msgid "Enables the feature to change the MasterSlave state of a ticket in the advanced MasterSlave mode."
+msgid ""
+"Enables the feature to change the MasterSlave state of a ticket in the "
+"advanced MasterSlave mode."
 msgstr ""
+"高度なマスター スレーブ モードでチケットのマスター スレーブ状態を変更する機能"
+"を有効にします。"
 
 #. SysConfig
-msgid "Enables the feature to forward articles from type 'forward' of a master ticket to the customers of the slave tickets. By default (disabled) it will not forward articles from type 'forward' to the slave tickets."
+msgid ""
+"Enables the feature to forward articles from type 'forward' of a master "
+"ticket to the customers of the slave tickets. By default (disabled) it will "
+"not forward articles from type 'forward' to the slave tickets."
 msgstr ""
+"マスターチケットの「転送」タイプからスレーブチケットの顧客に記事を転送する機"
+"能を有効にします。 デフォルト (無効) では、「forward」タイプの記事はスレーブ "
+"チケットに転送されません。"
 
 #. SysConfig
-msgid "Enables the feature to keep parent-child link after change of the MasterSlave state in the advanced MasterSlave mode."
+msgid ""
+"Enables the feature to keep parent-child link after change of the "
+"MasterSlave state in the advanced MasterSlave mode."
 msgstr ""
+"アドバンスト マスタースレーブ モードでマスタースレーブ状態の変更後に親子リン"
+"クを維持する機能を有効にします。"
 
 #. SysConfig
-msgid "Enables the feature to keep parent-child link after unset of the MasterSlave state in the advanced MasterSlave mode."
+msgid ""
+"Enables the feature to keep parent-child link after unset of the MasterSlave "
+"state in the advanced MasterSlave mode."
 msgstr ""
+"アドバンスト マスタースレーブ モードでマスタースレーブ状態の設定を解除した後"
+"も親子リンクを維持する機能を有効にします。"
 
 #. SysConfig
-msgid "Enables the feature to unset the MasterSlave state of a ticket in the advanced MasterSlave mode."
+msgid ""
+"Enables the feature to unset the MasterSlave state of a ticket in the "
+"advanced MasterSlave mode."
 msgstr ""
+"高度なマスタースレーブ モードでチケットのマスタースレーブ状態を設定解除する機"
+"能を有効にします。"
 
 #. SysConfig
-msgid "If a note is added by an agent, sets the state of the ticket in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgid ""
+"If a note is added by an agent, sets the state of the ticket in the ticket "
+"MasterSlave screen of a zoomed ticket in the agent interface."
 msgstr ""
+"担当者によってメモが追加された場合、担当者インターフェイスのズームされたチ"
+"ケットのチケット マスタースレーブ画面でチケットの状態を設定します。"
 
 #. SysConfig
 msgid "Master / Slave"
@@ -147,91 +209,181 @@ msgid "MasterSlave module for Ticket Bulk feature."
 msgstr "MasterSlave モジュールのチケット一括処理機能"
 
 #. SysConfig
-msgid "Parameters for the dashboard backend of the master tickets overview of the agent interface. \"Limit\" is the number of entries shown by default. \"Group\" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). \"Default\" determines if the plugin is enabled by default or if the user needs to enable it manually. \"CacheTTLLocal\" is the cache time in minutes for the plugin."
+msgid ""
+"Parameters for the dashboard backend of the master tickets overview of the "
+"agent interface. \"Limit\" is the number of entries shown by default. "
+"\"Group\" is used to restrict the access to the plugin (e. g. Group: admin;"
+"group1;group2;). \"Default\" determines if the plugin is enabled by default "
+"or if the user needs to enable it manually. \"CacheTTLLocal\" is the cache "
+"time in minutes for the plugin."
 msgstr ""
+"担当者インターフェイスのマスター チケット概要のダッシュボード バックエンドの"
+"パラメーター。 「制限」は、デフォルトで表示されるエントリの数です。 「グルー"
+"プ」はプラグインへのアクセスを制限するために使用されます (例: グループ: "
+"admin;group1;group2;)。 「デフォルト」は、プラグインがデフォルトで有効になっ"
+"ているか、ユーザーが手動で有効にする必要があるかを決定します。 "
+"「CacheTTLLocal」は、プラグインのキャッシュ時間 (分単位) です。"
 
 #. SysConfig
-msgid "Parameters for the dashboard backend of the slave tickets overview of the agent interface. \"Limit\" is the number of entries shown by default. \"Group\" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). \"Default\" determines if the plugin is enabled by default or if the user needs to enable it manually. \"CacheTTLLocal\" is the cache time in minutes for the plugin."
+msgid ""
+"Parameters for the dashboard backend of the slave tickets overview of the "
+"agent interface. \"Limit\" is the number of entries shown by default. "
+"\"Group\" is used to restrict the access to the plugin (e. g. Group: admin;"
+"group1;group2;). \"Default\" determines if the plugin is enabled by default "
+"or if the user needs to enable it manually. \"CacheTTLLocal\" is the cache "
+"time in minutes for the plugin."
 msgstr ""
+"担当者インターフェイスのスレーブ チケット概要のダッシュボード バックエンドの"
+"パラメーター。 「制限」は、デフォルトで表示されるエントリの数です。 「グルー"
+"プ」はプラグインへのアクセスを制限するために使用されます (例: グループ: "
+"admin;group1;group2;)。 「デフォルト」は、プラグインがデフォルトで有効になっ"
+"ているか、ユーザーが手動で有効にする必要があるかを決定します。 "
+"「CacheTTLLocal」は、プラグインのキャッシュ時間 (分単位) です。"
 
 #. SysConfig
 msgid "Registration of the ticket event module."
-msgstr "チケットイベントモジュールの登録"
+msgstr "チケット登録のイベントモジュール"
 
 #. SysConfig
-msgid "Required permissions to use the ticket MasterSlave screen of a zoomed ticket in the agent interface."
-msgstr "担当者インタフェースで、ズームされたチケットのマスター・スレーブ画面を使用するための必要な許可です。"
+msgid ""
+"Required permissions to use the ticket MasterSlave screen of a zoomed ticket "
+"in the agent interface."
+msgstr ""
+"担当者インタフェースで、ズームされたチケットのマスター・スレーブ画面を使用す"
+"るための必要な許可です。"
 
 #. SysConfig
 msgid "Sets if Master / Slave field must be selected by the agent."
 msgstr ""
+"マスター/スレーブフィールドを担当者が選択する必要があるかどうかを設定します。"
 
 #. SysConfig
-msgid "Sets the default body text for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
-msgstr "担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、追加されたメモのデフォルトの本文を設定します。"
-
-#. SysConfig
-msgid "Sets the default subject for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
-msgstr "担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、追加されたメモのデフォルトの件名を設定します。"
-
-#. SysConfig
-msgid "Sets the responsible agent of the ticket in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
-msgstr "担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、チケットの責任を有する担当者を設定します。"
-
-#. SysConfig
-msgid "Sets the service in the ticket MasterSlave screen of a zoomed ticket in the agent interface (Ticket::Service needs to be activated)."
-msgstr "担当者インタフェースのズームされたチケットのチケットのマスター・スレーブ画面で、サービスを設定します (Ticket::Serviceを有効とする必要があります)。"
-
-#. SysConfig
-msgid "Sets the ticket owner in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
-msgstr "担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、チケット所有者を設定します。"
-
-#. SysConfig
-msgid "Sets the ticket type in the ticket MasterSlave screen of a zoomed ticket in the agent interface (Ticket::Type needs to be activated)."
-msgstr "担当者インタフェースのズームされたチケットのチケットのマスター・スレーブ画面で、チケット・タイプを設定します(Ticket::Typeを有効とする必要があります)。"
-
-#. SysConfig
-msgid "Shows a link in the menu to change the MasterSlave status of a ticket in the ticket zoom view of the agent interface."
+msgid ""
+"Sets the default body text for notes added in the ticket MasterSlave screen "
+"of a zoomed ticket in the agent interface."
 msgstr ""
+"担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、追加さ"
+"れたメモのデフォルトの本文を設定します。"
 
 #. SysConfig
-msgid "Shows a list of all the involved agents on this ticket, in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgid ""
+"Sets the default subject for notes added in the ticket MasterSlave screen of "
+"a zoomed ticket in the agent interface."
 msgstr ""
+"担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、追加さ"
+"れたメモのデフォルトの件名を設定します。"
 
 #. SysConfig
-msgid "Shows a list of all the possible agents (all agents with note permissions on the queue/ticket) to determine who should be informed about this note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgid ""
+"Sets the responsible agent of the ticket in the ticket MasterSlave screen of "
+"a zoomed ticket in the agent interface."
 msgstr ""
+"担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、チケッ"
+"トの責任を有する担当者を設定します。"
 
 #. SysConfig
-msgid "Shows the ticket priority options in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgid ""
+"Sets the service in the ticket MasterSlave screen of a zoomed ticket in the "
+"agent interface (Ticket::Service needs to be activated)."
 msgstr ""
+"担当者インタフェースのズームされたチケットのチケットのマスター・スレーブ画面"
+"で、サービスを設定します (Ticket::Serviceを有効とする必要があります)。"
 
 #. SysConfig
-msgid "Shows the title field in the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgid ""
+"Sets the ticket owner in the ticket MasterSlave screen of a zoomed ticket in "
+"the agent interface."
 msgstr ""
+"担当者インタフェースのズームされたチケットのマスター・スレーブ画面で、チケッ"
+"ト所有者を設定します。"
+
+#. SysConfig
+msgid ""
+"Sets the ticket type in the ticket MasterSlave screen of a zoomed ticket in "
+"the agent interface (Ticket::Type needs to be activated)."
+msgstr ""
+"担当者インタフェースのズームされたチケットのチケットのマスター・スレーブ画面"
+"で、チケット・タイプを設定します(Ticket::Typeを有効とする必要があります)。"
+
+#. SysConfig
+msgid ""
+"Shows a link in the menu to change the MasterSlave status of a ticket in the "
+"ticket zoom view of the agent interface."
+msgstr ""
+"担当者インターフェイスのチケット ズーム ビューでチケットのマスタースレーブ ス"
+"テータスを変更するためのリンクをメニューに表示します。"
+
+#. SysConfig
+msgid ""
+"Shows a list of all the involved agents on this ticket, in the ticket "
+"MasterSlave screen of a zoomed ticket in the agent interface."
+msgstr ""
+"担当者インターフェイスのズームされたチケットのチケット マスタースレーブ画面"
+"に、このチケットに関係する全ての担当者のリストが表示されます。"
+
+#. SysConfig
+msgid ""
+"Shows a list of all the possible agents (all agents with note permissions on "
+"the queue/ticket) to determine who should be informed about this note, in "
+"the ticket MasterSlave screen of a zoomed ticket in the agent interface."
+msgstr ""
+"担当者インターフェイスのズームされたチケットのチケット マスタースレーブ画面"
+"で、このメモについて誰に通知する必要があるかを決定するために、考えられる全て"
+"の担当者 (キュー/チケットに対してメモ権限を持つ全ての担当者) のリストを表示し"
+"ます。"
+
+#. SysConfig
+msgid ""
+"Shows the ticket priority options in the ticket MasterSlave screen of a "
+"zoomed ticket in the agent interface."
+msgstr ""
+"担当者インターフェイスのズームされたチケットのチケットマスタースレーブ画面に"
+"チケットの優先順位オプションを表示します。"
+
+#. SysConfig
+msgid ""
+"Shows the title field in the ticket MasterSlave screen of a zoomed ticket in "
+"the agent interface."
+msgstr ""
+"担当者インターフェイスのズームされたチケットのチケットマスタースレーブ画面に"
+"タイトルフィールドを表示します。"
 
 #. SysConfig
 msgid "Slave Tickets"
 msgstr "スレーブチケット"
 
 #. SysConfig
-msgid "Specifies the different article communication channels where the real name from Master ticket will be replaced with the one in the Slave ticket."
+msgid ""
+"Specifies the different article communication channels where the real name "
+"from Master ticket will be replaced with the one in the Slave ticket."
 msgstr ""
+"マスターチケットの実名がスレーブチケットの実名に置き換えられる、さまざまな記"
+"事通信チャネルを指定します。"
 
 #. SysConfig
-msgid "This module activates Master/Slave field in new email and phone ticket screens."
-msgstr "このモジュールは、新規メール/電話チケットに、マスター/スレーブチケット欄を追加します。"
+msgid ""
+"This module activates Master/Slave field in new email and phone ticket "
+"screens."
+msgstr ""
+"このモジュールは、新規メール/電話チケットに、マスター/スレーブチケット欄を追"
+"加します。"
 
 #. SysConfig
-msgid "This setting is deprecated and will be removed in further versions of MasterSlave."
+msgid ""
+"This setting is deprecated and will be removed in further versions of "
+"MasterSlave."
 msgstr ""
+"この設定は非推奨であり、MasterSlave の今後のバージョンでは削除される予定で"
+"す。"
 
 #. SysConfig
 msgid "Ticket MasterSlave."
 msgstr "マスター・スレーブチケット"
 
 #. Template: AdminDynamicFieldMasterSlave
-msgid "This is the namespace in which this field will be used as prefix with the name."
+msgid ""
+"This is the namespace in which this field will be used as prefix with the "
+"name."
 msgstr ""
 
 #. Template: AgentTicketMasterSlave
@@ -239,7 +391,9 @@ msgid "Edit Article \"%s\" of %s%s%s"
 msgstr ""
 
 #. SysConfig
-msgid "A precentage value of the minimal translation progress per language, to be usable for documentations."
+msgid ""
+"A precentage value of the minimal translation progress per language, to be "
+"usable for documentations."
 msgstr ""
 
 #. SysConfig
@@ -315,19 +469,43 @@ msgid "Definition of GIT clone/push URL Prefix."
 msgstr ""
 
 #. SysConfig
-msgid "Definition of a Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRelease => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed."
+msgid ""
+"Definition of a Dynamic Field: Group => Group with access to the Dynamic "
+"Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => "
+"Name of the Widgets; InformationAreaSize => Size and position of the widgets "
+"(Large|Small); Name => Name of the Dynamic Field which should be used; "
+"Priority => Order of the Dynamic Fields; State => State of the Fields (0 = "
+"disabled, 1 = active, 2 = mandatory), FilterRelease => Regex which the "
+"repository name has to match to be displayed, FilterPackage => Regex which "
+"the package name has to match to be displayed, FilterBranch => Regex which "
+"the branch name has to match to be displayed, FilterRelease => Regex which "
+"the repelase version string has to match to be displayed."
 msgstr ""
 
 #. SysConfig
-msgid "Definition of a Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed."
+msgid ""
+"Definition of a Dynamic Field: Group => Group with access to the Dynamic "
+"Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => "
+"Name of the Widgets; InformationAreaSize => Size and position of the widgets "
+"(Large|Small); Name => Name of the Dynamic Field which should be used; "
+"Priority => Order of the Dynamic Fields; State => State of the Fields (0 = "
+"disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the "
+"repository name has to match to be displayed, FilterPackage => Regex which "
+"the package name has to match to be displayed, FilterBranch => Regex which "
+"the branch name has to match to be displayed, FilterRelease => Regex which "
+"the repelase version string has to match to be displayed."
 msgstr ""
 
 #. SysConfig
-msgid "Definition of external MD5 sums (key => MD5, Value => Vendor, PackageName, Version, Date)."
+msgid ""
+"Definition of external MD5 sums (key => MD5, Value => Vendor, PackageName, "
+"Version, Date)."
 msgstr ""
 
 #. SysConfig
-msgid "Definition of mappings between public repository requests and internal OPMS repositories."
+msgid ""
+"Definition of mappings between public repository requests and internal OPMS "
+"repositories."
 msgstr ""
 
 #. SysConfig
@@ -355,7 +533,9 @@ msgid "Disable online repositories."
 msgstr ""
 
 #. SysConfig
-msgid "Do not log git ssh connection authorization results for these users. Useful for automated stuff."
+msgid ""
+"Do not log git ssh connection authorization results for these users. Useful "
+"for automated stuff."
 msgstr ""
 
 #. SysConfig
@@ -375,23 +555,32 @@ msgid "Export all relevant releases to ftp server."
 msgstr ""
 
 #. SysConfig
-msgid "Frontend module registration for the OPMS object in the agent interface."
+msgid ""
+"Frontend module registration for the OPMS object in the agent interface."
 msgstr ""
 
 #. SysConfig
-msgid "Frontend module registration for the PublicOPMSRepository object in the public interface."
+msgid ""
+"Frontend module registration for the PublicOPMSRepository object in the "
+"public interface."
 msgstr ""
 
 #. SysConfig
-msgid "Frontend module registration for the PublicOPMSRepositoryLookup object in the public interface."
+msgid ""
+"Frontend module registration for the PublicOPMSRepositoryLookup object in "
+"the public interface."
 msgstr ""
 
 #. SysConfig
-msgid "Frontend module registration for the PublicOPMSTestBuild object in the public interface."
+msgid ""
+"Frontend module registration for the PublicOPMSTestBuild object in the "
+"public interface."
 msgstr ""
 
 #. SysConfig
-msgid "Frontend module registration for the PublicPackageVerification object in the public interface."
+msgid ""
+"Frontend module registration for the PublicPackageVerification object in the "
+"public interface."
 msgstr ""
 
 #. SysConfig
@@ -403,7 +592,9 @@ msgid "GIT Author registration."
 msgstr ""
 
 #. SysConfig
-msgid "Generate HTML comment hooks for the specified blocks so that filters can use them."
+msgid ""
+"Generate HTML comment hooks for the specified blocks so that filters can use "
+"them."
 msgstr ""
 
 #. SysConfig
@@ -431,15 +622,20 @@ msgid "Group, whose members have repository admin permissions in OPMS."
 msgstr ""
 
 #. SysConfig
-msgid "Group, whose members will see CI test result information in OPMS screens."
+msgid ""
+"Group, whose members will see CI test result information in OPMS screens."
 msgstr ""
 
 #. SysConfig
-msgid "Groups an authenticated user (by user login and password) must be member of to build test packages via the public interface."
+msgid ""
+"Groups an authenticated user (by user login and password) must be member of "
+"to build test packages via the public interface."
 msgstr ""
 
 #. SysConfig
-msgid "Groups which will be set during git project creation processes while adding OPMS repositories."
+msgid ""
+"Groups which will be set during git project creation processes while adding "
+"OPMS repositories."
 msgstr ""
 
 #. SysConfig
@@ -447,7 +643,9 @@ msgid "Manage dynamic field in screens."
 msgstr ""
 
 #. SysConfig
-msgid "Manage your public SSH key(s) for Git access here. Make sure to save this preference when you add a new key."
+msgid ""
+"Manage your public SSH key(s) for Git access here. Make sure to save this "
+"preference when you add a new key."
 msgstr ""
 
 #. SysConfig
@@ -471,7 +669,8 @@ msgid "OPMS"
 msgstr ""
 
 #. SysConfig
-msgid "Only users who have rw permissions in one of these groups may access git."
+msgid ""
+"Only users who have rw permissions in one of these groups may access git."
 msgstr ""
 
 #. SysConfig
@@ -483,15 +682,48 @@ msgid "Parameters for the pages in the BranchView screen."
 msgstr ""
 
 #. SysConfig
-msgid "Pre-Definition of the 'GITProjectName' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed."
+msgid ""
+"Pre-Definition of the 'GITProjectName' Dynamic Field: Group => Group with "
+"access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); "
+"InformationAreaName => Name of the Widgets; InformationAreaSize => Size and "
+"position of the widgets (Large|Small); Name => Name of the Dynamic Field "
+"which should be used; Priority => Order of the Dynamic Fields; State => "
+"State of the Fields (0 = disabled, 1 = active, 2 = mandatory), "
+"FilterRepository => Regex which the repository name has to match to be "
+"displayed, FilterPackage => Regex which the package name has to match to be "
+"displayed, FilterBranch => Regex which the branch name has to match to be "
+"displayed, FilterRelease => Regex which the repelase version string has to "
+"match to be displayed."
 msgstr ""
 
 #. SysConfig
-msgid "Pre-Definition of the 'GITRepositoryName' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed."
+msgid ""
+"Pre-Definition of the 'GITRepositoryName' Dynamic Field: Group => Group with "
+"access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); "
+"InformationAreaName => Name of the Widgets; InformationAreaSize => Size and "
+"position of the widgets (Large|Small); Name => Name of the Dynamic Field "
+"which should be used; Priority => Order of the Dynamic Fields; State => "
+"State of the Fields (0 = disabled, 1 = active, 2 = mandatory), "
+"FilterRepository => Regex which the repository name has to match to be "
+"displayed, FilterPackage => Regex which the package name has to match to be "
+"displayed, FilterBranch => Regex which the branch name has to match to be "
+"displayed, FilterRelease => Regex which the repelase version string has to "
+"match to be displayed."
 msgstr ""
 
 #. SysConfig
-msgid "Pre-Definition of the 'PackageDeprecated' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed."
+msgid ""
+"Pre-Definition of the 'PackageDeprecated' Dynamic Field: Group => Group with "
+"access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); "
+"InformationAreaName => Name of the Widgets; InformationAreaSize => Size and "
+"position of the widgets (Large|Small); Name => Name of the Dynamic Field "
+"which should be used; Priority => Order of the Dynamic Fields; State => "
+"State of the Fields (0 = disabled, 1 = active, 2 = mandatory), "
+"FilterRepository => Regex which the repository name has to match to be "
+"displayed, FilterPackage => Regex which the package name has to match to be "
+"displayed, FilterBranch => Regex which the branch name has to match to be "
+"displayed, FilterRelease => Regex which the repelase version string has to "
+"match to be displayed."
 msgstr ""
 
 #. SysConfig
@@ -519,11 +751,16 @@ msgid "Sets the path for the BugzillaAddComment post receive script location."
 msgstr ""
 
 #. SysConfig
-msgid "Sets the path for the OTRSCodePolicy  script location. It is recommended to have a separate clone of the OTRSCodePolicy module that is updated via cron."
+msgid ""
+"Sets the path for the OTRSCodePolicy  script location. It is recommended to "
+"have a separate clone of the OTRSCodePolicy module that is updated via cron."
 msgstr ""
 
 #. SysConfig
-msgid "Sets the path for the OTRSCodePolicy pre receive script location. It is recommended to have a separate clone of the OTRSCodePolicy module that is updated via cron."
+msgid ""
+"Sets the path for the OTRSCodePolicy pre receive script location. It is "
+"recommended to have a separate clone of the OTRSCodePolicy module that is "
+"updated via cron."
 msgstr ""
 
 #. SysConfig
@@ -531,7 +768,8 @@ msgid "Show latest commits in git repositories."
 msgstr ""
 
 #. SysConfig
-msgid "Shows a link in the menu to go create a unit test from the current ticket."
+msgid ""
+"Shows a link in the menu to go create a unit test from the current ticket."
 msgstr ""
 
 #. SysConfig
@@ -563,46 +801,69 @@ msgid "The path to the theme folder, containing the sphinx themes."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration defines all possible screens to enable or disable default columns."
+msgid ""
+"This configuration defines all possible screens to enable or disable default "
+"columns."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration defines all possible screens to enable or disable dynamic fields."
+msgid ""
+"This configuration defines all possible screens to enable or disable dynamic "
+"fields."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration defines if only valids or all (invalids) dynamic fields should be shown."
+msgid ""
+"This configuration defines if only valids or all (invalids) dynamic fields "
+"should be shown."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration defines if the OTRS package verification should be active or disabled. If disabled all packages are shown as verified. It's still recommended to use only verified packages."
+msgid ""
+"This configuration defines if the OTRS package verification should be active "
+"or disabled. If disabled all packages are shown as verified. It's still "
+"recommended to use only verified packages."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration defines the URL to the OTRS CloudService Proxy service. The http or https prefix will be added, depending on selection SysConfig 'Znuny4OTRSRepoType'."
+msgid ""
+"This configuration defines the URL to the OTRS CloudService Proxy service. "
+"The http or https prefix will be added, depending on selection SysConfig "
+"'Znuny4OTRSRepoType'."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration registers a Output post-filter to extend package verification."
+msgid ""
+"This configuration registers a Output post-filter to extend package "
+"verification."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration registers an OutputFilter module that removes OTRS Business Solution TM advertisements."
+msgid ""
+"This configuration registers an OutputFilter module that removes OTRS "
+"Business Solution TM advertisements."
 msgstr ""
 
 #. SysConfig
-msgid "This configuration registers an output filter to hide online repository selection in package manager."
+msgid ""
+"This configuration registers an output filter to hide online repository "
+"selection in package manager."
 msgstr ""
 
 #. SysConfig
-msgid "Tidy unprocessed release that not passed test pomules checks for a long time."
+msgid ""
+"Tidy unprocessed release that not passed test pomules checks for a long time."
 msgstr ""
 
 #. SysConfig
-msgid "Users who have rw permissions in one of these groups are permitted to execute force pushes 'git push --force'."
+msgid ""
+"Users who have rw permissions in one of these groups are permitted to "
+"execute force pushes 'git push --force'."
 msgstr ""
 
 #. SysConfig
-msgid "Users who have rw permissions in one of these groups are permitted to manage projects. Additionally the members have administration permissions to the git management."
+msgid ""
+"Users who have rw permissions in one of these groups are permitted to manage "
+"projects. Additionally the members have administration permissions to the "
+"git management."
 msgstr ""
-
