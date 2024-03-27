@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2020 Rother OSS GmbH, https://otobo.de/
+# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.de/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -27,6 +27,7 @@
 # special markers has been set along the file to easy spot the differences introduced by
 # MasterSlave package
 package Kernel::Modules::AgentTicketMasterSlave;
+
 # ---
 
 use strict;
@@ -34,7 +35,7 @@ use warnings;
 
 use Kernel::System::EmailParser;
 use Kernel::System::VariableCheck qw(:all);
-use Kernel::Language qw(Translatable);
+use Kernel::Language              qw(Translatable);
 
 our $ObjectManagerDisabled = 1;
 
@@ -64,7 +65,6 @@ sub new {
 
     # check if ReplyToArticle really belongs to the ticket
     my %ReplyToArticleContent;
-    my @ReplyToAdresses;
     if ($ReplyToArticle) {
 
         my $ArticleBackendObject = $Kernel::OM->Get('Kernel::System::Ticket::Article')->BackendForArticle(
@@ -145,7 +145,7 @@ sub Run {
     # error screen, don't show ticket
     if ( !$Access ) {
         return $LayoutObject->NoPermission(
-            Message => $LayoutObject->{LanguageObject}->Translate( 'You need %s permissions!', $Config->{Permission} ),
+            Message    => $LayoutObject->{LanguageObject}->Translate( 'You need %s permissions!', $Config->{Permission} ),
             WithHeader => 'yes',
         );
     }
@@ -341,9 +341,9 @@ sub Run {
     my %GetParam;
     for my $Key (
         qw(
-        NewStateID NewPriorityID TimeUnits IsVisibleForCustomer Title Body Subject NewQueueID
-        Year Month Day Hour Minute NewOwnerID NewResponsibleID TypeID ServiceID SLAID
-        Expand ReplyToArticle StandardTemplateID CreateArticle FormDraftID Title
+            NewStateID NewPriorityID TimeUnits IsVisibleForCustomer Title Body Subject NewQueueID
+            Year Month Day Hour Minute NewOwnerID NewResponsibleID TypeID ServiceID SLAID
+            Expand ReplyToArticle StandardTemplateID CreateArticle FormDraftID Title
         )
         )
     {
@@ -364,18 +364,21 @@ sub Run {
 
     # define the dynamic fields to show based on the object type
     my $ObjectType = ['Ticket'];
+
 # ---
 # MasterSlave
 # ---
     # get master/slave dynamic field
-    my $MasterSlaveDynamicField = $ConfigObject->Get('MasterSlave::DynamicField') || '';
+    my $MasterSlaveDynamicField    = $ConfigObject->Get('MasterSlave::DynamicField')    || '';
     my $MasterSlaveAdvancedEnabled = $ConfigObject->Get('MasterSlave::AdvancedEnabled') || 0;
+
 # ---
 
     # only screens that add notes can modify Article dynamic fields
     if ( $Config->{Note} ) {
         $ObjectType = [ 'Ticket', 'Article' ];
     }
+
 # ---
 # MasterSlave
 # ---
@@ -383,6 +386,7 @@ sub Run {
         my $Display = $Config->{MasterSlaveMandatory} ? 2 : 1;
         $Config->{DynamicField}->{$MasterSlaveDynamicField} = $Display;
     }
+
 # ---
 
     # get the dynamic fields for this screen
@@ -740,6 +744,7 @@ sub Run {
         DYNAMICFIELD:
         for my $DynamicFieldConfig ( @{$DynamicField} ) {
             next DYNAMICFIELD if !IsHashRefWithData($DynamicFieldConfig);
+
 # ---
 # MasterSlave
 # ---
@@ -750,6 +755,7 @@ sub Run {
             {
                 next DYNAMICFIELD;
             }
+
 # ---
 
             my $PossibleValuesFilter;
@@ -794,15 +800,17 @@ sub Run {
             }
 
             my $ValidationResult;
+
 # ---
 # MasterSlave
 # ---
             if ( $DynamicFieldConfig->{Name} eq $MasterSlaveDynamicField ) {
-               $PossibleValuesFilter = $Self->_GetMasterSlaveData(
-                Ticket => \%Ticket,
-                MasterSlaveDynamicField => $MasterSlaveDynamicField,
-               );
+                $PossibleValuesFilter = $Self->_GetMasterSlaveData(
+                    Ticket                  => \%Ticket,
+                    MasterSlaveDynamicField => $MasterSlaveDynamicField,
+                );
             }
+
 # ---
 
             # Do not validate only if object type is Article and CreateArticle value is not defined.
@@ -812,7 +820,7 @@ sub Run {
                     DynamicFieldConfig   => $DynamicFieldConfig,
                     PossibleValuesFilter => $PossibleValuesFilter,
                     ParamObject          => $ParamObject,
-                    Mandatory =>
+                    Mandatory            =>
                         $Config->{DynamicField}->{ $DynamicFieldConfig->{Name} } == 2,
                 );
 
@@ -820,7 +828,7 @@ sub Run {
                     return $LayoutObject->ErrorScreen(
                         Message =>
                             $LayoutObject->{LanguageObject}->Translate(
-                            'Could not perform validation on field %s!', $DynamicFieldConfig->{Label}
+                                'Could not perform validation on field %s!', $DynamicFieldConfig->{Label}
                             ),
                         Comment => Translatable('Please contact the administrator.'),
                     );
@@ -839,7 +847,7 @@ sub Run {
                 my $DynamicFieldHTML = $DynamicFieldBackendObject->EditFieldRender(
                     DynamicFieldConfig   => $DynamicFieldConfig,
                     PossibleValuesFilter => $PossibleValuesFilter,
-                    ServerError          => $ValidationResult->{ServerError} || '',
+                    ServerError          => $ValidationResult->{ServerError}  || '',
                     ErrorMessage         => $ValidationResult->{ErrorMessage} || '',
                     Mandatory            => $Config->{DynamicField}->{ $DynamicFieldConfig->{Name} } == 2,
                     LayoutObject         => $LayoutObject,
@@ -876,7 +884,7 @@ sub Run {
                 my $DynamicFieldHTML = $DynamicFieldBackendObject->EditFieldRender(
                     DynamicFieldConfig   => $DynamicFieldConfig,
                     PossibleValuesFilter => $PossibleValuesFilter,
-                    ServerError          => $ValidationResult->{ServerError} || '',
+                    ServerError          => $ValidationResult->{ServerError}  || '',
                     ErrorMessage         => $ValidationResult->{ErrorMessage} || '',
                     Mandatory            => ( $Class eq 'Validate_Required' ) ? 1 : 0,
                     Class                => $Class,
@@ -1186,7 +1194,7 @@ sub Run {
 
             # get list of users that will be informed without selection in informed/involved list
             my @UserListWithoutSelection
-                = split( ',', $ParamObject->GetParam( Param => 'UserListWithoutSelection' ) || "" );
+                = split( /,/, $ParamObject->GetParam( Param => 'UserListWithoutSelection' ) || "" );
 
             # get inform user list
             my @InformUserID = $ParamObject->GetArray( Param => 'InformUserID' );
@@ -1264,6 +1272,7 @@ sub Run {
         DYNAMICFIELD:
         for my $DynamicFieldConfig ( @{$DynamicField} ) {
             next DYNAMICFIELD if !IsHashRefWithData($DynamicFieldConfig);
+
 # ---
 # MasterSlave
 # ---
@@ -1274,6 +1283,7 @@ sub Run {
             {
                 next DYNAMICFIELD;
             }
+
 # ---
 
             # set the object ID (TicketID or ArticleID) depending on the field configration
@@ -1730,6 +1740,7 @@ sub Run {
         DYNAMICFIELD:
         for my $DynamicFieldConfig ( @{$DynamicField} ) {
             next DYNAMICFIELD if !IsHashRefWithData($DynamicFieldConfig);
+
 # ---
 # MasterSlave
 # ---
@@ -1740,6 +1751,7 @@ sub Run {
             {
                 next DYNAMICFIELD;
             }
+
 # ---
 
             my $PossibleValuesFilter;
@@ -1782,15 +1794,17 @@ sub Run {
                     }
                 }
             }
+
 # ---
 # MasterSlave
 # ---
             if ( $DynamicFieldConfig->{Name} eq $MasterSlaveDynamicField ) {
-               $PossibleValuesFilter =  $Self->_GetMasterSlaveData(
-                Ticket => \%Ticket,
-                MasterSlaveDynamicField => $MasterSlaveDynamicField,
-               );
+                $PossibleValuesFilter = $Self->_GetMasterSlaveData(
+                    Ticket                  => \%Ticket,
+                    MasterSlaveDynamicField => $MasterSlaveDynamicField,
+                );
             }
+
 # ---
 
             # to store dynamic field value from database (or undefined)
@@ -1928,13 +1942,13 @@ sub _Mask {
     if (
         ( $ConfigObject->Get('Ticket::Type') && $Config->{TicketType} )
         ||
-        ( $ConfigObject->Get('Ticket::Service')     && $Config->{Service} )     ||
+        ( $ConfigObject->Get('Ticket::Service') && $Config->{Service} )         ||
         ( $ConfigObject->Get('Ticket::Responsible') && $Config->{Responsible} ) ||
-        $Config->{Title}    ||
-        $Config->{Queue}    ||
-        $Config->{Owner}    ||
-        $Config->{State}    ||
-        $Config->{Priority} ||
+        $Config->{Title}                                                        ||
+        $Config->{Queue}                                                        ||
+        $Config->{Owner}                                                        ||
+        $Config->{State}                                                        ||
+        $Config->{Priority}                                                     ||
         scalar @{ $Param{TicketTypeDynamicFields} } > 0
         )
     {
@@ -2998,16 +3012,18 @@ sub _GetFieldsToUpdate {
 
     # get config of frontend module
     my $Config = $Kernel::OM->Get('Kernel::Config')->Get("Ticket::Frontend::$Self->{Action}");
+
 # ---
 # MasterSlave
 # ---
     # get master/slave dynamic field
-    my $MasterSlaveDynamicField = $Kernel::OM->Get('Kernel::Config')->Get('MasterSlave::DynamicField') || '';
+    my $MasterSlaveDynamicField    = $Kernel::OM->Get('Kernel::Config')->Get('MasterSlave::DynamicField')    || '';
     my $MasterSlaveAdvancedEnabled = $Kernel::OM->Get('Kernel::Config')->Get('MasterSlave::AdvancedEnabled') || 0;
 
     if ($MasterSlaveAdvancedEnabled) {
         $Config->{DynamicField}->{$MasterSlaveDynamicField} = 1;
     }
+
 # ---
 
     # only screens that add notes can modify Article dynamic fields
@@ -3209,19 +3225,20 @@ sub _GetQueues {
     );
     return \%Queues;
 }
+
 # ---
 # MasterSlave
 # ---
 sub _GetMasterSlaveData {
-    my ($Self, %Param) = @_;
+    my ( $Self, %Param ) = @_;
 
     # get config object
     my $ConfigObject = $Kernel::OM->Get('Kernel::Config');
 
-    my $UnsetMasterSlave  = $ConfigObject->Get('MasterSlave::UnsetMasterSlave') || 0;
+    my $UnsetMasterSlave  = $ConfigObject->Get('MasterSlave::UnsetMasterSlave')  || 0;
     my $UpdateMasterSlave = $ConfigObject->Get('MasterSlave::UpdateMasterSlave') || 0;
 
-    my %Ticket = %{ $Param{Ticket} };
+    my %Ticket                  = %{ $Param{Ticket} };
     my $MasterSlaveDynamicField = $Param{MasterSlaveDynamicField};
 
     my $FieldValue = $Ticket{ 'DynamicField_' . $MasterSlaveDynamicField } || '';
@@ -3240,7 +3257,7 @@ sub _GetMasterSlaveData {
         $Data{UnsetMaster} = $LayoutObject->{LanguageObject}->Translate('Unset Master Ticket');
     }
     if ( $UnsetMasterSlave && $FieldValue =~ m{^SlaveOf:(.*?)$}xms ) {
-        $Data{UnsetSlave}  = $LayoutObject->{LanguageObject}->Translate('Unset Slave Ticket');
+        $Data{UnsetSlave} = $LayoutObject->{LanguageObject}->Translate('Unset Slave Ticket');
     }
 
     # get ticket object
@@ -3248,7 +3265,7 @@ sub _GetMasterSlaveData {
     my $TicketHook        = $ConfigObject->Get('Ticket::Hook');
     my $TicketHookDivider = $ConfigObject->Get('Ticket::HookDivider');
 
-    if ( $UpdateMasterSlave ) {
+    if ($UpdateMasterSlave) {
         my @TicketIDs = $TicketObject->TicketSearch(
             Result => 'ARRAY',
 
@@ -3285,6 +3302,7 @@ sub _GetMasterSlaveData {
 
     return \%Data;
 }
+
 # ---
 
 1;
