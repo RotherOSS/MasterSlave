@@ -16,6 +16,8 @@
 
 package Kernel::System::DynamicField::Driver::MasterSlave;
 
+## nofilter(TidyAll::Plugin::OTOBO::Perl::ParamObject)
+
 use strict;
 use warnings;
 
@@ -40,7 +42,7 @@ our @ObjectDependencies = (
 
 Kernel::System::DynamicField::Driver::MasterSlave
 
-=head1 SYNOPSIS
+=head1 DESCRIPTION
 
 DynamicFields MasterSlave Driver delegate
 
@@ -74,8 +76,7 @@ sub new {
     };
 
     # get the Dynamic Field Backend custom extensions
-    my $DynamicFieldDriverExtensions
-        = $Kernel::OM->Get('Kernel::Config')->Get('DynamicFields::Extension::Driver::MasterSlave');
+    my $DynamicFieldDriverExtensions = $Kernel::OM->Get('Kernel::Config')->Get('DynamicFields::Extension::Driver::MasterSlave');
 
     EXTENSION:
     for my $ExtensionKey ( sort keys %{$DynamicFieldDriverExtensions} ) {

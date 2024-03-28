@@ -13,10 +13,7 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <https://www.gnu.org/licenses/>.
 # --
-# This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
-# --
+
 # ---
 # MasterSlave
 # ---
@@ -41,7 +38,9 @@
 
     <div class="LayoutPopup ARIARoleMain">
         <div class="Header">
-            <h1>
+            <ul class="HeaderPopup">
+                <li class="HeaderPopupleft">
+                    <h1>
 [% RenderBlockStart("HeaderAgentTicketFreeText") %]
 [% Translate("Change Free Text of %s%s%s", Config('Ticket::Hook'), Config('Ticket::HookDivider'), Data.TicketNumber) | html %]
 [% RenderBlockEnd("HeaderAgentTicketFreeText") %]
@@ -72,22 +71,21 @@
 # ---
                  &mdash; [% Data.Title | html %]
             </h1>
-            <p class="AsteriskExplanation">[% Translate("All fields marked with an asterisk (*) are mandatory.") | html %]</p>
-
+                </li>
 [% RenderBlockStart("TicketBack") %]
-            <p>
+                <li class="HeaderPopupright">
                 <a class="CancelClosePopup" href="#">[% Translate("Cancel & close") | html %]</a>
-            </p>
+                </li>
 [% RenderBlockEnd("TicketBack") %]
 [% RenderBlockStart("PropertiesLock") %]
-            <p>
-                [% Translate("The ticket has been locked") | html %].
-                <a class="UndoClosePopup" href="[% Env("Baselink") %]Action=AgentTicketLock;Subaction=Unlock;TicketID=[% Data.TicketID %][% IF Data.PreviousOwner %];PreviousOwner=[% Data.PreviousOwner %][% END %];[% Env("ChallengeTokenParam") | html %]">
-                    [% Translate("Undo & close") | html %]
-                </a>
-            </p>
+                <li class="HeaderPopupright">
+                    [% Translate("The ticket has been locked") | html %].
+                    <a class="UndoClosePopup" href="[% Env("Baselink") %]Action=AgentTicketLock;Subaction=Unlock;TicketID=[% Data.TicketID %][% IF Data.PreviousOwner %];PreviousOwner=[% Data.PreviousOwner %][% END %];[% Env("ChallengeTokenParam") | html %]">
+                        [% Translate("Undo & close") | html %]
+                    </a>
+                </li>
 [% RenderBlockEnd("PropertiesLock") %]
-
+            </ul>
         </div>
         <div class="Content">
             [% INCLUDE "FormElements/DraftNotifications.tt" %]
@@ -279,7 +277,7 @@
 [% RenderBlockEnd("Priority") %]
 
 [% RenderBlockStart("TicketTypeDynamicField") %]
-                        <div class="Row Row_DynamicField_[% Data.Name | html %]">
+                        <div class="Row Row_DynamicField_[% Data.Name | html %][% Data.HiddenClass | html %]" [% Data.HiddenStyle | html %]>
                         [% Data.Label %]
                             <div class="Field">
                             [% Data.Field %]
@@ -363,7 +361,7 @@
                             <div class="Field">
                                 <input type="hidden" name="UserListWithoutSelection" value="[% Data.UserListWithoutSelection  | html %]" />
 [% RenderBlockStart("InformAgentsWithoutSelectionSingleUser") %]
-                                <span title="[% Data.UserEmail %]">[% Data.UserFullname %]</span>[% RenderBlockStart("InformAgentsWithoutSelectionSingleUserSeparator") %],[% RenderBlockEnd("InformAgentsWithoutSelectionSingleUserSeparator") %]
+                                <span title="[% Data.UserEmail | html %]">[% Data.UserFullname | html %]</span>[% RenderBlockStart("InformAgentsWithoutSelectionSingleUserSeparator") %],[% RenderBlockEnd("InformAgentsWithoutSelectionSingleUserSeparator") %]
 [% RenderBlockEnd("InformAgentsWithoutSelectionSingleUser") %]
                             </div>
                             <div class="Clear"></div>
@@ -448,7 +446,7 @@
 [% RenderBlockEnd("TimeUnits") %]
 
 [% RenderBlockStart("ArticleTypeDynamicField") %]
-                            <div class="Row Row_DynamicField_[% Data.Name | html %]">
+                            <div class="Row Row_DynamicField_[% Data.Name | html %][% Data.HiddenClass | html %]" [% Data.HiddenStyle | html %]>
                             [% Data.Label %]
                                 <div class="Field">
                                 [% Data.Field %]
