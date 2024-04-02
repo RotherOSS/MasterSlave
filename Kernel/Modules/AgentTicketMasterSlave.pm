@@ -121,9 +121,9 @@ sub new {
     $Self->{MasterSlaveDynamicField}    = $Kernel::OM->Get('Kernel::Config')->Get('MasterSlave::DynamicField')    || '';
     $Self->{MasterSlaveAdvancedEnabled} = $Kernel::OM->Get('Kernel::Config')->Get('MasterSlave::AdvancedEnabled') || 0;
 
-    if ($Self->{MasterSlaveAdvancedEnabled}) {
+    if ( $Self->{MasterSlaveAdvancedEnabled} ) {
         my $Display = $Config->{MasterSlaveMandatory} ? 2 : 1;
-        $Config->{DynamicField}->{$Self->{MasterSlaveDynamicField}} = $Display;
+        $Config->{DynamicField}->{ $Self->{MasterSlaveDynamicField} } = $Display;
     }
 
 # ---
