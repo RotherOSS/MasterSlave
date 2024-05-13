@@ -2,7 +2,7 @@
 # OTOBO is a web-based ticketing system for service organisations.
 # --
 # Copyright (C) 2001-2020 OTRS AG, https://otrs.com/
-# Copyright (C) 2019-2024 Rother OSS GmbH, https://otobo.de/
+# Copyright (C) 2019-2021 Rother OSS GmbH, https://otobo.de/
 # --
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free Software
@@ -23,122 +23,169 @@ use utf8;
 sub Data {
     my $Self = shift;
 
+    # Template: AdminDynamicFieldMasterSlave
+    $Self->{Translation}->{'This is the namespace in which this field will be used as prefix with the name.'} =
+        '';
+
     # Template: AgentTicketMasterSlave
+    $Self->{Translation}->{'Edit Article "%s" of %s%s%s'} = '';
     $Self->{Translation}->{'Manage Master/Slave status for %s%s%s'} = 'Gestisci lo stato Master / Slave per %s%s%s';
 
     # Perl Module: Kernel/Modules/AgentTicketMasterSlave.pm
-    $Self->{Translation}->{'New Master Ticket'}   = 'Nuovo ticket primario';
+    $Self->{Translation}->{'New Master Ticket'} = 'Nuovo ticket primario';
     $Self->{Translation}->{'Unset Master Ticket'} = 'Rimuovi ticket primario';
-    $Self->{Translation}->{'Unset Slave Ticket'}  = 'Rimuovi ticket secondario';
+    $Self->{Translation}->{'Unset Slave Ticket'} = 'Rimuovi ticket secondario';
     $Self->{Translation}->{'Slave of %s%s%s: %s'} = 'Schiavo di: %s%s%s: %s';
 
     # Perl Module: Kernel/Output/HTML/TicketBulk/MasterSlave.pm
     $Self->{Translation}->{'Unset Master Tickets'} = 'Ticket master non impostati';
-    $Self->{Translation}->{'Unset Slave Tickets'}  = 'Ticket schiavi non impostati';
+    $Self->{Translation}->{'Unset Slave Tickets'} = 'Ticket schiavi non impostati';
 
     # Perl Module: Kernel/System/DynamicField/Driver/MasterSlave.pm
-    $Self->{Translation}->{'Master'}          = '';
+    $Self->{Translation}->{'Master'} = '';
     $Self->{Translation}->{'Slave of %s%s%s'} = 'Schiavo di %s%s%s';
-    $Self->{Translation}->{'Master Ticket'}   = 'Ticket maestro';
+    $Self->{Translation}->{'Master Ticket'} = 'Ticket maestro';
 
     # SysConfig
-    $Self->{Translation}->{'All master tickets'} = 'Tutti i ticket maestri';
-    $Self->{Translation}->{'All slave tickets'}  = 'Tutti i ticket schiavi';
-    $Self->{Translation}->{'Allows adding notes in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Consente di aggiungere delle note nella schermata MasterSlave di un ticket nell\'interfaccia Agente';
-    $Self->{Translation}->{'Change the MasterSlave state of the ticket.'}           = 'Cambia lo stato MasterSlave del ticket';
-    $Self->{Translation}->{'Defines dynamic field name for master ticket feature.'} = 'Definisce il nome del campo dinamico per la funzione ticket principale.';
-    $Self->{Translation}->{
-        'Defines if a ticket lock is required in the ticket MasterSlave screen of a zoomed ticket in the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).'
-        }
-        =
-        'Definisce se è necessario un blocco ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti (se il ticket non è ancora bloccato, il ticket viene bloccato e l\'agente corrente verrà impostato automaticamente come proprietario).';
-    $Self->{Translation}->{'Defines if the MasterSlave note is visible for the customer by default.'} =
-        'Definisce se la nota MasterSlave è visibile per il cliente per impostazione predefinita.';
-    $Self->{Translation}
-        ->{'Defines the default next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Definisce lo stato successivo predefinito di un ticket dopo aver aggiunto una nota, nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Defines the default ticket priority in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Definisce la priorità predefinita del ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia dell\'interfaccia agenti.';
-    $Self->{Translation}->{'Defines the history comment for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
-        'Definisce il commento cronologico per l\'azione sullo schermo MasterSlave del ticket, che viene utilizzato per la cronologia dei ticket nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
-        'Definisce il tipo di cronologia per l\'azione della schermata MasterSlave del ticket, che viene utilizzata per la cronologia dei ticket nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Definisce lo stato successivo di un ticket dopo aver aggiunto una nota, nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia dell\'interfaccia agenti.';
-    $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Abilita la parte avanzata di MasterSlave della funzione.';
-    $Self->{Translation}->{'Enables the feature that slave tickets follow the master ticket to a new master in the advanced MasterSlave mode.'} =
-        'Abilita la funzione che i ticket slave seguono il ticket master verso un nuovo master in modalità MasterSlave avanzata.';
-    $Self->{Translation}->{'Enables the feature to change the MasterSlave state of a ticket in the advanced MasterSlave mode.'} =
-        'Abilita la funzione per cambiare lo stato MasterSlave di un ticket nella modalità MasterSlave avanzata.';
-    $Self->{Translation}->{
-        'Enables the feature to forward articles from type \'forward\' of a master ticket to the customers of the slave tickets. By default (disabled) it will not forward articles from type \'forward\' to the slave tickets.'
-        }
-        =
-        'Abilita la funzione per inoltrare articoli dal tipo \'inoltra\' di un ticket principale ai clienti dei ticket slave. Per impostazione predefinita (disabilitato) non inoltrerà articoli dal tipo "inoltra" ai ticket schiavo.';
-    $Self->{Translation}->{'Enables the feature to keep parent-child link after change of the MasterSlave state in the advanced MasterSlave mode.'} =
-        'Abilita la funzione per mantenere il collegamento genitore-figlio dopo la modifica dello stato MasterSlave nella modalità MasterSlave avanzata.';
-    $Self->{Translation}->{'Enables the feature to keep parent-child link after unset of the MasterSlave state in the advanced MasterSlave mode.'} =
-        'Abilita la funzione per mantenere il collegamento genitore-figlio dopo aver disinserito lo stato MasterSlave nella modalità MasterSlave avanzata.';
-    $Self->{Translation}->{'Enables the feature to unset the MasterSlave state of a ticket in the advanced MasterSlave mode.'} =
-        'Abilita la funzione a disinserire lo stato MasterSlave di un ticket nella modalità MasterSlave avanzata.';
-    $Self->{Translation}
-        ->{'If a note is added by an agent, sets the state of the ticket in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Se una nota viene aggiunta da un agente, imposta lo stato del ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Master / Slave'}                              = 'Primario / Secondario';
-    $Self->{Translation}->{'Master Tickets'}                              = 'Ticket maestro';
-    $Self->{Translation}->{'MasterSlave'}                                 = 'MasterSlave';
-    $Self->{Translation}->{'MasterSlave module for Ticket Bulk feature.'} = 'Modulo MasterSlave per la funzione Bulk Ticket.';
-    $Self->{Translation}->{
-        'Parameters for the dashboard backend of the master tickets overview of the agent interface. "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin.'
-        }
-        =
-        'Parametri per il backend del dashboard della panoramica dei ticket principali dell\'interfaccia agenti. "Limite" è il numero di voci visualizzate per impostazione predefinita. "Gruppo" viene utilizzato per limitare l\'accesso al plug-in (ad es. Gruppo: admin; gruppo1; gruppo2;). "Predefinito" determina se il plug-in è abilitato per impostazione predefinita o se l\'utente deve abilitarlo manualmente. "CacheTTLLocal" è il tempo di cache in minuti per il plugin.';
-    $Self->{Translation}->{
-        'Parameters for the dashboard backend of the slave tickets overview of the agent interface. "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin.'
-        }
-        =
-        'Parametri per il backend del dashboard della panoramica dei ticket slave dell\'interfaccia dell\'interfaccia agenti. "Limite" è il numero di voci visualizzate per impostazione predefinita. "Gruppo" viene utilizzato per limitare l\'accesso al plug-in (ad es. Gruppo: admin; gruppo1; gruppo2;). "Predefinito" determina se il plug-in è abilitato per impostazione predefinita o se l\'utente deve abilitarlo manualmente. "CacheTTLLocal" è il tempo di cache in minuti per il plugin.';
-    $Self->{Translation}->{'Registration of the ticket event module.'} = 'Registrazione del modulo di evento del ticket.';
-    $Self->{Translation}->{'Required permissions to use the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Permessi necessari per utilizzare la schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Sets if Master / Slave field must be selected by the agent.'}
-        = 'Imposta se il campo Master / Slave deve essere selezionato dall\'agente.';
-    $Self->{Translation}->{'Sets the default body text for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Imposta il corpo del testo predefinito per le note aggiunte nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia dell\'interfaccia agenti.';
-    $Self->{Translation}->{'Sets the default subject for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Imposta l\'oggetto predefinito per le note aggiunte nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Sets the responsible agent of the ticket in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Imposta l\'agente responsabile del ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Sets the service in the ticket MasterSlave screen of a zoomed ticket in the agent interface (Ticket::Service needs to be activated).'} =
-        'Imposta il servizio nella schermata del ticket MasterSlave di un ticket ingrandito nell\'interfaccia agenti (Ticket :: Il servizio deve essere attivato).';
-    $Self->{Translation}->{'Sets the ticket owner in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Imposta il proprietario del ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Sets the ticket type in the ticket MasterSlave screen of a zoomed ticket in the agent interface (Ticket::Type needs to be activated).'}
-        =
-        'Imposta il tipo di ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti (Ticket::Type deve essere attivato).';
-    $Self->{Translation}->{'Shows a link in the menu to change the MasterSlave status of a ticket in the ticket zoom view of the agent interface.'} =
-        'Mostra un collegamento nel menu per modificare lo stato MasterSlave di un ticket nella vista zoom ticket nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Shows a list of all the involved agents on this ticket, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Mostra un elenco di tutti gli agenti coinvolti su questo ticket, nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{
-        'Shows a list of all the possible agents (all agents with note permissions on the queue/ticket) to determine who should be informed about this note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'
-        }
-        =
-        'Mostra un elenco di tutti i possibili agenti (tutti gli agenti con i permessi note sulla coda/ticket) per determinare chi deve essere informato su questa nota, nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Shows the ticket priority options in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Mostra le opzioni di priorità del ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Shows the title field in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        'Mostra il campo del titolo nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Slave Tickets'} = 'Ticket schiavi';
-    $Self->{Translation}
-        ->{'Specifies the different article communication channels where the real name from Master ticket will be replaced with the one in the Slave ticket.'} =
-        'Specifica i diversi canali di comunicazione dell\'articolo in cui il nome reale del ticket Master verrà sostituito con quello nel ticket Slave.';
-    $Self->{Translation}->{'This module activates Master/Slave field in new email and phone ticket screens.'} =
-        'Questo modulo attiva il campo Primario/Secondario nelle schermate dei nuovi ticket tramite email e telefono.';
-    $Self->{Translation}->{'This setting is deprecated and will be removed in further versions of MasterSlave.'} =
-        'Questa impostazione è obsoleta e verrà rimossa in ulteriori versioni di MasterSlave.';
-    $Self->{Translation}->{'Ticket MasterSlave.'} = 'Ticket MasterSlave.';
+    $Self->{Translation}->{'A precentage value of the minimal translation progress per language, to be usable for documentations.'} =
+        '';
+    $Self->{Translation}->{'Access repos via http or https.'} = '';
+    $Self->{Translation}->{'Autoloading of Znuny4OTRSRepo extensions.'} = '';
+    $Self->{Translation}->{'Backend module registration for the config conflict check module.'} =
+        '';
+    $Self->{Translation}->{'Backend module registration for the file conflict check module.'} =
+        '';
+    $Self->{Translation}->{'Backend module registration for the function redefine check module.'} =
+        '';
+    $Self->{Translation}->{'Backend module registration for the manual set module.'} = '';
+    $Self->{Translation}->{'Block hooks to be created for BS ad removal.'} = '';
+    $Self->{Translation}->{'Block hooks to be created for package manager output filter.'} =
+        '';
+    $Self->{Translation}->{'Branch View commit limit'} = '';
+    $Self->{Translation}->{'CodePolicy'} = '';
+    $Self->{Translation}->{'Commit limit per page for Branch view screen'} = '';
+    $Self->{Translation}->{'Create analysis file'} = '';
+    $Self->{Translation}->{'Creates a analysis file from this ticket and sends to Znuny.'} =
+        '';
+    $Self->{Translation}->{'Creates a analysis file from this ticket.'} = '';
+    $Self->{Translation}->{'Define private addon repos.'} = '';
+    $Self->{Translation}->{'Defines the filter that processes the HTML templates.'} = '';
+    $Self->{Translation}->{'Defines the test module for checking code policy.'} = '';
+    $Self->{Translation}->{'Definition of GIT clone/push URL Prefix.'} = '';
+    $Self->{Translation}->{'Definition of a Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRelease => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
+        '';
+    $Self->{Translation}->{'Definition of a Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
+        '';
+    $Self->{Translation}->{'Definition of external MD5 sums (key => MD5, Value => Vendor, PackageName, Version, Date).'} =
+        '';
+    $Self->{Translation}->{'Definition of mappings between public repository requests and internal OPMS repositories.'} =
+        '';
+    $Self->{Translation}->{'Definition of package states.'} = '';
+    $Self->{Translation}->{'Definition of renamed OPMS packages.'} = '';
+    $Self->{Translation}->{'Directory, which is used by Git to cache repositories.'} = '';
+    $Self->{Translation}->{'Directory, which is used by Git to store temporary data.'} = '';
+    $Self->{Translation}->{'Directory, which is used by Git to store working copies.'} = '';
+    $Self->{Translation}->{'Disable online repositories.'} = '';
+    $Self->{Translation}->{'Do not log git ssh connection authorization results for these users. Useful for automated stuff.'} =
+        '';
+    $Self->{Translation}->{'Dynamic Fields Screens'} = '';
+    $Self->{Translation}->{'DynamicFieldScreen'} = '';
+    $Self->{Translation}->{'Export all available public keys to authorized_keys file.'} = '';
+    $Self->{Translation}->{'Export all relevant releases to ftp server.'} = '';
+    $Self->{Translation}->{'Frontend module registration for the OPMS object in the agent interface.'} =
+        '';
+    $Self->{Translation}->{'Frontend module registration for the PublicOPMSRepository object in the public interface.'} =
+        '';
+    $Self->{Translation}->{'Frontend module registration for the PublicOPMSRepositoryLookup object in the public interface.'} =
+        '';
+    $Self->{Translation}->{'Frontend module registration for the PublicOPMSTestBuild object in the public interface.'} =
+        '';
+    $Self->{Translation}->{'Frontend module registration for the PublicPackageVerification object in the public interface.'} =
+        '';
+    $Self->{Translation}->{'Frontend module registration for the admin interface.'} = '';
+    $Self->{Translation}->{'GIT Author registration.'} = '';
+    $Self->{Translation}->{'Generate HTML comment hooks for the specified blocks so that filters can use them.'} =
+        '';
+    $Self->{Translation}->{'Generate documentations once per night.'} = '';
+    $Self->{Translation}->{'Git'} = '';
+    $Self->{Translation}->{'Git Management'} = '';
+    $Self->{Translation}->{'Git Repository'} = '';
+    $Self->{Translation}->{'Group, whose members have delete admin permissions in OPMS.'} = '';
+    $Self->{Translation}->{'Group, whose members have repository admin permissions in OPMS.'} =
+        '';
+    $Self->{Translation}->{'Group, whose members will see CI test result information in OPMS screens.'} =
+        '';
+    $Self->{Translation}->{'Groups an authenticated user (by user login and password) must be member of to build test packages via the public interface.'} =
+        '';
+    $Self->{Translation}->{'Groups which will be set during git project creation processes while adding OPMS repositories.'} =
+        '';
+    $Self->{Translation}->{'Manage dynamic field in screens.'} = '';
+    $Self->{Translation}->{'Manage your public SSH key(s) for Git access here. Make sure to save this preference when you add a new key.'} =
+        '';
+    $Self->{Translation}->{'Module to generate statistics about the added code lines.'} = '';
+    $Self->{Translation}->{'Module to generate statistics about the growth of code.'} = '';
+    $Self->{Translation}->{'Module to generate statistics about the number of git commits.'} =
+        '';
+    $Self->{Translation}->{'Module to generate statistics about the removed code lines.'} = '';
+    $Self->{Translation}->{'OPMS'} = '';
+    $Self->{Translation}->{'Only users who have rw permissions in one of these groups may access git.'} =
+        '';
+    $Self->{Translation}->{'Option to set a package compatibility manually.'} = '';
+    $Self->{Translation}->{'Parameters for the pages in the BranchView screen.'} = '';
+    $Self->{Translation}->{'Pre-Definition of the \'GITProjectName\' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
+        '';
+    $Self->{Translation}->{'Pre-Definition of the \'GITRepositoryName\' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
+        '';
+    $Self->{Translation}->{'Pre-Definition of the \'PackageDeprecated\' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
+        '';
+    $Self->{Translation}->{'Recipients that will be informed by email in case of errors.'} =
+        '';
+    $Self->{Translation}->{'SSH Keys for Git Access'} = '';
+    $Self->{Translation}->{'Send analysis file'} = '';
+    $Self->{Translation}->{'Sets the git clone address to be used in repository listings.'} =
+        '';
+    $Self->{Translation}->{'Sets the home directory for git repositories.'} = '';
+    $Self->{Translation}->{'Sets the path for the BugzillaAddComment post receive script location.'} =
+        '';
+    $Self->{Translation}->{'Sets the path for the OTRSCodePolicy  script location. It is recommended to have a separate clone of the OTRSCodePolicy module that is updated via cron.'} =
+        '';
+    $Self->{Translation}->{'Sets the path for the OTRSCodePolicy pre receive script location. It is recommended to have a separate clone of the OTRSCodePolicy module that is updated via cron.'} =
+        '';
+    $Self->{Translation}->{'Show latest commits in git repositories.'} = '';
+    $Self->{Translation}->{'Shows a link in the menu to go create a unit test from the current ticket.'} =
+        '';
+    $Self->{Translation}->{'Synchronize OPMS tables with a remote database.'} = '';
+    $Self->{Translation}->{'The minimum version of the sphinx library.'} = '';
+    $Self->{Translation}->{'The name of the sphinx theme to be used.'} = '';
+    $Self->{Translation}->{'The path to the OTRS CSS file (relative below the static path).'} =
+        '';
+    $Self->{Translation}->{'The path to the OTRS logo (relative below the static path).'} = '';
+    $Self->{Translation}->{'The path to the static folder, containing images and css files.'} =
+        '';
+    $Self->{Translation}->{'The path to the theme folder, containing the sphinx themes.'} = '';
+    $Self->{Translation}->{'This configuration defines all possible screens to enable or disable default columns.'} =
+        '';
+    $Self->{Translation}->{'This configuration defines all possible screens to enable or disable dynamic fields.'} =
+        '';
+    $Self->{Translation}->{'This configuration defines if only valids or all (invalids) dynamic fields should be shown.'} =
+        '';
+    $Self->{Translation}->{'This configuration defines if the OTRS package verification should be active or disabled. If disabled all packages are shown as verified. It\'s still recommended to use only verified packages.'} =
+        '';
+    $Self->{Translation}->{'This configuration defines the URL to the OTRS CloudService Proxy service. The http or https prefix will be added, depending on selection SysConfig \'Znuny4OTRSRepoType\'.'} =
+        '';
+    $Self->{Translation}->{'This configuration registers a Output post-filter to extend package verification.'} =
+        '';
+    $Self->{Translation}->{'This configuration registers an OutputFilter module that removes OTRS Business Solution TM advertisements.'} =
+        '';
+    $Self->{Translation}->{'This configuration registers an output filter to hide online repository selection in package manager.'} =
+        '';
+    $Self->{Translation}->{'Tidy unprocessed release that not passed test pomules checks for a long time.'} =
+        '';
+    $Self->{Translation}->{'Users who have rw permissions in one of these groups are permitted to execute force pushes \'git push --force\'.'} =
+        '';
+    $Self->{Translation}->{'Users who have rw permissions in one of these groups are permitted to manage projects. Additionally the members have administration permissions to the git management.'} =
+        '';
+
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     );
