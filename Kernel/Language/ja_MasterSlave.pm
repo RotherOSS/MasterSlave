@@ -43,7 +43,7 @@ sub Data {
 
     # Perl Module: Kernel/System/DynamicField/Driver/MasterSlave.pm
     $Self->{Translation}->{'Master'} = 'マスター';
-    $Self->{Translation}->{'Slave of %s%s%s'} = '';
+    $Self->{Translation}->{'Slave of %s%s%s'} = '%s%s%s のスレーブ';
     $Self->{Translation}->{'Master Ticket'} = 'マスター チケット';
 
     # SysConfig

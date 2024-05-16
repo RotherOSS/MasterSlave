@@ -32,7 +32,7 @@ sub Data {
     $Self->{Translation}->{'Manage Master/Slave status for %s%s%s'} = 'Управление статусом Главная/Ведомая для %s%s%s';
 
     # Perl Module: Kernel/Modules/AgentTicketMasterSlave.pm
-    $Self->{Translation}->{'New Master Ticket'} = 'Новая Master заявка';
+    $Self->{Translation}->{'New Master Ticket'} = 'Новый главный билет';
     $Self->{Translation}->{'Unset Master Ticket'} = 'Снять значение Master заявка';
     $Self->{Translation}->{'Unset Slave Ticket'} = 'Снять значение Slave заявка';
     $Self->{Translation}->{'Slave of %s%s%s: %s'} = 'Ведомая от %s%s%s: %s';
@@ -43,7 +43,7 @@ sub Data {
 
     # Perl Module: Kernel/System/DynamicField/Driver/MasterSlave.pm
     $Self->{Translation}->{'Master'} = 'Главный';
-    $Self->{Translation}->{'Slave of %s%s%s'} = '';
+    $Self->{Translation}->{'Slave of %s%s%s'} = 'Ведомый %s%s%s';
     $Self->{Translation}->{'Master Ticket'} = 'Главная заявка';
 
     # SysConfig

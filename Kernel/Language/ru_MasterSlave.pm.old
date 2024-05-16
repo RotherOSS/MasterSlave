@@ -27,7 +27,7 @@ sub Data {
     $Self->{Translation}->{'Manage Master/Slave status for %s%s%s'} = 'Управление статусом Главная/Ведомая для %s%s%s';
 
     # Perl Module: Kernel/Modules/AgentTicketMasterSlave.pm
-    $Self->{Translation}->{'New Master Ticket'} = 'Новая Master заявка';
+    $Self->{Translation}->{'New Master Ticket'} = 'Новый главный билет';
     $Self->{Translation}->{'Unset Master Ticket'} = 'Снять значение Master заявка';
     $Self->{Translation}->{'Unset Slave Ticket'} = 'Снять значение Slave заявка';
     $Self->{Translation}->{'Slave of %s%s%s: %s'} = 'Ведомая от %s%s%s: %s';
@@ -38,7 +38,7 @@ sub Data {
 
     # Perl Module: Kernel/System/DynamicField/Driver/MasterSlave.pm
     $Self->{Translation}->{'Master'} = 'Главный';
-    $Self->{Translation}->{'Slave of %s%s%s'} = '';
+    $Self->{Translation}->{'Slave of %s%s%s'} = 'Ведомый %s%s%s';
     $Self->{Translation}->{'Master Ticket'} = 'Главная заявка';
 
     # SysConfig
@@ -51,7 +51,7 @@ sub Data {
     $Self->{Translation}->{'Defines if a ticket lock is required in the ticket MasterSlave screen of a zoomed ticket in the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).'} =
         'Требуется ли блокировка заявки при применении опции MasterSlave в интерфейсе агента (если заявка еще не заблокирована, она блокируется и текущий агент становится ее Владельцем).';
     $Self->{Translation}->{'Defines if the MasterSlave note is visible for the customer by default.'} =
-        '';
+        'Определяет, будет ли запись MasterSlave видна клиенту по умолчанию.';
     $Self->{Translation}->{'Defines the default next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Задает следующее состояние по умолчанию для заявки после добавления заметки на экране MasterSlave заявки при ее просмотре в интерфейсе агента.';
     $Self->{Translation}->{'Defines the default ticket priority in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
@@ -88,7 +88,7 @@ sub Data {
     $Self->{Translation}->{'Registration of the ticket event module.'} = 'Регистрация модуля обработки событий заявки.';
     $Self->{Translation}->{'Required permissions to use the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Права, требуемые для использования функции MasterSlave заявок в интерфейсе агента.';
-    $Self->{Translation}->{'Sets if Master / Slave field must be selected by the agent.'} = '';
+    $Self->{Translation}->{'Sets if Master / Slave field must be selected by the agent.'} = 'Устанавливает, должно ли поле Master / Slave быть выбрано агентом.';
     $Self->{Translation}->{'Sets the default body text for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Устанавливает текст сообщения по умолчанию при добавлении сообщения на экране MasterSlave заявки в интерфейсе агента.';
     $Self->{Translation}->{'Sets the default subject for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
@@ -110,14 +110,14 @@ sub Data {
     $Self->{Translation}->{'Shows the ticket priority options in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Дает возможность изменить приоритет на экране MasterSlave заявки в интерфейсе агента. ';
     $Self->{Translation}->{'Shows the title field in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
-        '';
+        'Показывает поле заголовка на экране билет MasterSlave увеличенного билета в интерфейсе агента.';
     $Self->{Translation}->{'Slave Tickets'} = 'Ведомые заявки';
     $Self->{Translation}->{'Specifies the different article communication channels where the real name from Master ticket will be replaced with the one in the Slave ticket.'} =
-        '';
+        'Указывает различные каналы связи артикулов, в которых реальное имя из билета Master будет заменено на имя в билете Slave.';
     $Self->{Translation}->{'This module activates Master/Slave field in new email and phone ticket screens.'} =
         'Этот модуль включает возможность выбора master/slave опции на экране создания заявки, на основе телефонного звонка или письма клиента агентом.';
     $Self->{Translation}->{'This setting is deprecated and will be removed in further versions of MasterSlave.'} =
-        '';
+        'Этот параметр устарел и будет удален в последующих версиях MasterSlave.';
     $Self->{Translation}->{'Ticket MasterSlave.'} = 'Заявка MasterSlave';
 
 
