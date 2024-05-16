@@ -24,23 +24,23 @@ sub Data {
     my $Self = shift;
 
     # Template: AgentTicketMasterSlave
-    $Self->{Translation}->{'Manage Master/Slave status for %s%s%s'} = 'Upravljanje statusom glavni/zavisni za %s%s%s';
+    $Self->{Translation}->{'Manage Master/Slave status for %s%s%s'} = '';
     $Self->{Translation}->{'All fields marked with an asterisk (*) are mandatory.'} = '';
 
     # Perl Module: Kernel/Modules/AgentTicketMasterSlave.pm
-    $Self->{Translation}->{'New Master Ticket'} = 'Novi glavni tiket';
-    $Self->{Translation}->{'Unset Master Ticket'} = 'Opozovi podešavanje glavnog tiketa';
-    $Self->{Translation}->{'Unset Slave Ticket'} = 'Opozovi podešavanje zavisnog tiketa';
-    $Self->{Translation}->{'Slave of %s%s%s: %s'} = 'Zavisni od %s%s%s: %s';
+    $Self->{Translation}->{'New Master Ticket'} = '';
+    $Self->{Translation}->{'Unset Master Ticket'} = '';
+    $Self->{Translation}->{'Unset Slave Ticket'} = '';
+    $Self->{Translation}->{'Slave of %s%s%s: %s'} = '';
 
     # Perl Module: Kernel/Output/HTML/TicketBulk/MasterSlave.pm
-    $Self->{Translation}->{'Unset Master Tickets'} = 'Opozovi podešavanje glavnih tiketa';
-    $Self->{Translation}->{'Unset Slave Tickets'} = 'Opozovi podešavanje zavisnih tiketa';
+    $Self->{Translation}->{'Unset Master Tickets'} = '';
+    $Self->{Translation}->{'Unset Slave Tickets'} = '';
 
     # Perl Module: Kernel/System/DynamicField/Driver/MasterSlave.pm
-    $Self->{Translation}->{'Master'} = 'Glavno';
-    $Self->{Translation}->{'Slave of %s%s%s'} = 'Zavisni od %s%s%s';
-    $Self->{Translation}->{'Master Ticket'} = 'Glavni tiket';
+    $Self->{Translation}->{'Master'} = '';
+    $Self->{Translation}->{'Slave of %s%s%s'} = '';
+    $Self->{Translation}->{'Master Ticket'} = '';
 
     # SysConfig
     $Self->{Translation}->{'All master tickets'} = 'Svi glavni tiketi';
