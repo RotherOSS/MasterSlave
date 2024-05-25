@@ -25,6 +25,7 @@ sub Data {
 
     # Template: AgentTicketMasterSlave
     $Self->{Translation}->{'Manage Master/Slave status for %s%s%s'} = '';
+    $Self->{Translation}->{'All fields marked with an asterisk (*) are mandatory.'} = '';
 
     # Perl Module: Kernel/Modules/AgentTicketMasterSlave.pm
     $Self->{Translation}->{'New Master Ticket'} = '';
@@ -42,144 +43,92 @@ sub Data {
     $Self->{Translation}->{'Master Ticket'} = '';
 
     # SysConfig
-    $Self->{Translation}->{'A precentage value of the minimal translation progress per language, to be usable for documentations.'} =
+    $Self->{Translation}->{'All master tickets'} = 'Сви главни тикети';
+    $Self->{Translation}->{'All slave tickets'} = 'Сви зависни тикети';
+    $Self->{Translation}->{'Allows adding notes in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Дозвољава додавање белешки на главни/зависни екрану детаљног приказа тикета оператерског интерфејса.';
+    $Self->{Translation}->{'Change the MasterSlave state of the ticket.'} = 'Промени главни/зависни статус тикета.';
+    $Self->{Translation}->{'Defines dynamic field name for master ticket feature.'} = 'Дефинише динамички назив поља за функцију главног тикета.';
+    $Self->{Translation}->{'Defines if a ticket lock is required in the ticket MasterSlave screen of a zoomed ticket in the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).'} =
+        'Одређује да ли је потребно закључати главни/зависни екран тикета на детаљном приказу тикета у интерфејсу оператера (ако тикет још увек није закључан, тикет ће добити статус закључан и тренутни оператер ће бити аутоматски постављен као власник).';
+    $Self->{Translation}->{'Defines if the MasterSlave note is visible for the customer by default.'} =
+        'Дефинише уколико је MasterSlave напомена подразумевано видљива за клијент кориснике.';
+    $Self->{Translation}->{'Defines the default frontend (HTML) theme to be used by the agents and customers. If you like, you can add your own theme. Please refer the administrator manual located at https://doc.otobo.org/.'} =
         '';
-    $Self->{Translation}->{'Access repos via http or https.'} = '';
-    $Self->{Translation}->{'Autoloading of Znuny4OTRSRepo extensions.'} = '';
-    $Self->{Translation}->{'Backend module registration for the config conflict check module.'} =
+    $Self->{Translation}->{'Defines the default frontend language. All the possible values are determined by the available language files on the system. These values are listed as the keys in the setting \'DefaultUsedLanguages\'.'} =
         '';
-    $Self->{Translation}->{'Backend module registration for the file conflict check module.'} =
+    $Self->{Translation}->{'Defines the default next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Одређује подразумевани наредни статус тикета после додаваља белешке, на главни/зависни екрану детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Defines the default ticket priority in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Одређује подразумевани приоритет тикета на главни/зависни екану детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Defines the history comment for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
+        'Одређује коментар за историјат на главни/зависни екранској акцији, што ће се користити за историјат у интерфејсу оператера.';
+    $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
+        'Одређује тип историјата за главни/зависни екранску акцију, што ће се користити за историјат у интерфејсу оператера.';
+    $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Одређује наредни статус тикета после додаваља белешке, на главни/зависни екрану детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Defines the parameters for the dashboard backend. "Cmd" is used to specify command with parameters. "Group" is used to restrict access to the plugin (e. g. Group: admin;group1;group2;). "Default" indicates if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTL" indicates the cache expiration period in minutes for the plugin. "Mandatory" determines if the plugin is always shown and can not be removed by agents. Only works if DashboardBackend::AllowCmdOutput is enabled in Config.pm.'} =
         '';
-    $Self->{Translation}->{'Backend module registration for the function redefine check module.'} =
+    $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Активира напредни део функције главни/зависни.';
+    $Self->{Translation}->{'Enables the feature that slave tickets follow the master ticket to a new master in the advanced MasterSlave mode.'} =
+        'Активирање својства да зависни тикет прати главни на нови главни у напредном главни/зависни моду.';
+    $Self->{Translation}->{'Enables the feature to change the MasterSlave state of a ticket in the advanced MasterSlave mode.'} =
+        'Активирање функције за промену стања тикета главни/зависни  у напредном главни/зависни моду.';
+    $Self->{Translation}->{'Enables the feature to forward articles from type \'forward\' of a master ticket to the customers of the slave tickets. By default (disabled) it will not forward articles from type \'forward\' to the slave tickets.'} =
+        'Активирање својства за прослеђивање чланака типа "проследи" главног тикета корисницима зависних тикета. Подразумевано је (искључено) да се ништа не прослеђује зависним тикетима.';
+    $Self->{Translation}->{'Enables the feature to keep parent-child link after change of the MasterSlave state in the advanced MasterSlave mode.'} =
+        'Активирање функције за задржавање везе надређени-подређени после измене стања главни/зависни у напредном главни/зависни моду.';
+    $Self->{Translation}->{'Enables the feature to keep parent-child link after unset of the MasterSlave state in the advanced MasterSlave mode.'} =
+        'Активирање функције за задржавање везе надређени-подређени после опозива подешавања стања главни/зависни  у напредном главни/зависни моду.';
+    $Self->{Translation}->{'Enables the feature to unset the MasterSlave state of a ticket in the advanced MasterSlave mode.'} =
+        'Активирање функције за опозив подешавања стања тикета главни/зависни у напредном главни/зависни моду.';
+    $Self->{Translation}->{'If "LDAP" was selected for Customer::AuthModule and you wish to use TLS security to communicate with the LDAP server, the "verify" parameter can be specified here. See Net::LDAP::start_tls for more information about the parameter.'} =
         '';
-    $Self->{Translation}->{'Backend module registration for the manual set module.'} = '';
-    $Self->{Translation}->{'Block hooks to be created for BS ad removal.'} = '';
-    $Self->{Translation}->{'Block hooks to be created for package manager output filter.'} =
-        '';
-    $Self->{Translation}->{'Branch View commit limit'} = 'Ograničenje broja komitova u prikazu grane';
-    $Self->{Translation}->{'CodePolicy'} = '';
-    $Self->{Translation}->{'Commit limit per page for Branch view screen'} = 'Ograničenje broja komitova po strani u ekranu prikaza grane';
-    $Self->{Translation}->{'Create analysis file'} = '';
-    $Self->{Translation}->{'Creates a analysis file from this ticket and sends to Znuny.'} =
-        '';
-    $Self->{Translation}->{'Creates a analysis file from this ticket.'} = '';
-    $Self->{Translation}->{'Define private addon repos.'} = '';
-    $Self->{Translation}->{'Defines the filter that processes the HTML templates.'} = '';
-    $Self->{Translation}->{'Defines the test module for checking code policy.'} = '';
-    $Self->{Translation}->{'Definition of GIT clone/push URL Prefix.'} = 'Definicija adresnog prefiksa za GIT kloniranje i slanje.';
-    $Self->{Translation}->{'Definition of a Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRelease => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
-        'Definicija dinamičkog polja: Group => grupa za pristup dinamičkim poljima; AlwaysVisible => polje može biti uklonjeno (0|1); InformationAreaName => naslov dodataka; InformationAreaSize => veličina i pozicija dodataka (Large|Small); Name => naziv dinamičkog polja; Priority => redosled dinamičkih polja; State => status polja (0 = onemogućeno, 1 = omogućeno, 2 = obavezno); FilterRepository => regularni izraz koji naziv skladišta mora da zadovoljava da bi polje bilo prikazano; FilterPackage => regularni izraz koje naziv paketa mora da zadovoljava da bi polje bilo prikazano; FilterBranch => regularni izraz koji naziv grane mora da zadovoljava da bi polje bilo prikazano; FilterRelease => regularni izraz koji verzija izdanja mora da zadovoljava da bi polje bilo prikazano.';
-    $Self->{Translation}->{'Definition of a Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
-        'Definicija dinamičkog polja: Group => grupa za pristup dinamičkim poljima; AlwaysVisible => polje može biti uklonjeno (0|1); InformationAreaName => naslov dodataka; InformationAreaSize => veličina i pozicija dodataka (Large|Small); Name => naziv dinamičkog polja; Priority => redosled dinamičkih polja; State => status polja (0 = onemogućeno, 1 = omogućeno, 2 = obavezno); FilterRepository => regularni izraz koji naziv skladišta mora da zadovoljava da bi polje bilo prikazano; FilterPackage => regularni izraz koje naziv paketa mora da zadovoljava da bi polje bilo prikazano; FilterBranch => regularni izraz koji naziv grane mora da zadovoljava da bi polje bilo prikazano; FilterRelease => regularni izraz koji verzija izdanja mora da zadovoljava da bi polje bilo prikazano.';
-    $Self->{Translation}->{'Definition of external MD5 sums (key => MD5, Value => Vendor, PackageName, Version, Date).'} =
-        'Definicija eksternih MD5 vrednosti (ključ => MD5, vrednost => Vendor, PackageName, Version, Date).';
-    $Self->{Translation}->{'Definition of mappings between public repository requests and internal OPMS repositories.'} =
-        'Mapiranje skladišta u javnim zahtevima sa internim OPMS skladištima.';
-    $Self->{Translation}->{'Definition of package states.'} = 'Definicija stanja paketa.';
-    $Self->{Translation}->{'Definition of renamed OPMS packages.'} = 'Definicija OPMS paketa sa promenjenim imenom.';
-    $Self->{Translation}->{'Directory, which is used by Git to cache repositories.'} = '';
-    $Self->{Translation}->{'Directory, which is used by Git to store temporary data.'} = '';
-    $Self->{Translation}->{'Directory, which is used by Git to store working copies.'} = '';
-    $Self->{Translation}->{'Disable online repositories.'} = '';
-    $Self->{Translation}->{'Do not log git ssh connection authorization results for these users. Useful for automated stuff.'} =
-        'Isključi beleženje autorizacija prilikom ostvarivanja Git SSH konekcija za ove korisnike. Korisno za automatizaciju.';
-    $Self->{Translation}->{'Dynamic Fields Screens'} = '';
-    $Self->{Translation}->{'DynamicFieldScreen'} = '';
-    $Self->{Translation}->{'Export all available public keys to authorized_keys file.'} = 'Izvezi sve dostupne javne ključeve u datoteku authorized_keys.';
-    $Self->{Translation}->{'Export all relevant releases to ftp server.'} = 'Izvoz svih relevantnih izdanja na FTP server.';
-    $Self->{Translation}->{'Frontend module registration for the OPMS object in the agent interface.'} =
-        'Modul registracije za OPMS objekat u interfejsu operatera.';
-    $Self->{Translation}->{'Frontend module registration for the PublicOPMSRepository object in the public interface.'} =
-        'Modul registracije za PublicOPMSRepository objekat u javnom interfejsu.';
-    $Self->{Translation}->{'Frontend module registration for the PublicOPMSRepositoryLookup object in the public interface.'} =
-        'Modul registracije za PublicOPMSRepositoryLookup objekat u javnom interfejsu.';
-    $Self->{Translation}->{'Frontend module registration for the PublicOPMSTestBuild object in the public interface.'} =
-        'Modul registracije za PublicOPMSTestBuild objekat u javnom interfejsu.';
-    $Self->{Translation}->{'Frontend module registration for the PublicPackageVerification object in the public interface.'} =
-        'Modul registracije za PublicPackageVerification objekat u javnom interfejsu.';
-    $Self->{Translation}->{'Frontend module registration for the admin interface.'} = '';
-    $Self->{Translation}->{'GIT Author registration.'} = 'Registracija Git autora.';
-    $Self->{Translation}->{'Generate HTML comment hooks for the specified blocks so that filters can use them.'} =
-        '';
-    $Self->{Translation}->{'Generate documentations once per night.'} = '';
-    $Self->{Translation}->{'Git'} = 'Git';
-    $Self->{Translation}->{'Git Management'} = 'Git upravljanje';
-    $Self->{Translation}->{'Git Repository'} = '';
-    $Self->{Translation}->{'Group, whose members have delete admin permissions in OPMS.'} = 'Grupa čiji članovi imaju dozvolu za brisanje u OPMS.';
-    $Self->{Translation}->{'Group, whose members have repository admin permissions in OPMS.'} =
-        'Grupa čiji članovi imaju administratorske dozvole u OPMS.';
-    $Self->{Translation}->{'Group, whose members will see CI test result information in OPMS screens.'} =
-        '';
-    $Self->{Translation}->{'Groups an authenticated user (by user login and password) must be member of to build test packages via the public interface.'} =
-        'Grupe u kojima registrovani korisnik (po korisničkom imenu i lozinci) mora biti član da bi imao dozvolu za kreiranje test izdanja paketa u javnom interfejsu.';
-    $Self->{Translation}->{'Groups which will be set during git project creation processes while adding OPMS repositories.'} =
-        'Grupe koje će biti podešene prilikom kreiranja GIT projekta u slučaju dodavanja OPMS skladišta.';
-    $Self->{Translation}->{'Manage dynamic field in screens.'} = '';
-    $Self->{Translation}->{'Manage your public SSH key(s) for Git access here. Make sure to save this preference when you add a new key.'} =
-        'Uredite svoje javne SSH ključeve za Git pristup. Obratite pažnju da morate sačuvati ovo podešavanje prilikom dodavanja novog ključa.';
-    $Self->{Translation}->{'Module to generate statistics about the added code lines.'} = 'Modul za generisanje statistika o broju dodatih linija koda.';
-    $Self->{Translation}->{'Module to generate statistics about the growth of code.'} = 'Modul za generisanje statistika o uvećanju koda.';
-    $Self->{Translation}->{'Module to generate statistics about the number of git commits.'} =
-        'Modul za generisanje statistika o broju Git komitova.';
-    $Self->{Translation}->{'Module to generate statistics about the removed code lines.'} = 'Modul za generisanje statistika o broju uklonjenih linija koda.';
-    $Self->{Translation}->{'OPMS'} = 'OPMS';
-    $Self->{Translation}->{'Only users who have rw permissions in one of these groups may access git.'} =
-        'Samo korisnici koji imaju rw dozvolu u jednoj od ovih grupa imaće Git pristup.';
-    $Self->{Translation}->{'Option to set a package compatibility manually.'} = '';
-    $Self->{Translation}->{'Parameters for the pages in the BranchView screen.'} = 'Parametri za stranice u ekranu prikaza grane.';
-    $Self->{Translation}->{'Pre-Definition of the \'GITProjectName\' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
-        'Predefinisanje dinamičkog polja \'GITProjectName\': Group => grupa za pristup dinamičkim poljima; AlwaysVisible => polje može biti uklonjeno (0|1); InformationAreaName => naslov dodataka; InformationAreaSize => veličina i pozicija dodataka (Large|Small); Name => naziv dinamičkog polja; Priority => redosled dinamičkih polja; State => status polja (0 = onemogućeno, 1 = omogućeno, 2 = obavezno); FilterRepository => regularni izraz koji naziv skladišta mora da zadovoljava da bi polje bilo prikazano; FilterPackage => regularni izraz koje naziv paketa mora da zadovoljava da bi polje bilo prikazano; FilterBranch => regularni izraz koji naziv grane mora da zadovoljava da bi polje bilo prikazano; FilterRelease => regularni izraz koji verzija izdanja mora da zadovoljava da bi polje bilo prikazano.';
-    $Self->{Translation}->{'Pre-Definition of the \'GITRepositoryName\' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
-        'Predefinisanje dinamičkog polja \'GITRepositoryName\': Group => grupa za pristup dinamičkim poljima; AlwaysVisible => polje može biti uklonjeno (0|1); InformationAreaName => naslov dodataka; InformationAreaSize => veličina i pozicija dodataka (Large|Small); Name => naziv dinamičkog polja; Priority => redosled dinamičkih polja; State => status polja (0 = onemogućeno, 1 = omogućeno, 2 = obavezno); FilterRepository => regularni izraz koji naziv skladišta mora da zadovoljava da bi polje bilo prikazano; FilterPackage => regularni izraz koje naziv paketa mora da zadovoljava da bi polje bilo prikazano; FilterBranch => regularni izraz koji naziv grane mora da zadovoljava da bi polje bilo prikazano; FilterRelease => regularni izraz koji verzija izdanja mora da zadovoljava da bi polje bilo prikazano.';
-    $Self->{Translation}->{'Pre-Definition of the \'PackageDeprecated\' Dynamic Field: Group => Group with access to the Dynamic Fields; AlwaysVisible => Field can be removed (0|1); InformationAreaName => Name of the Widgets; InformationAreaSize => Size and position of the widgets (Large|Small); Name => Name of the Dynamic Field which should be used; Priority => Order of the Dynamic Fields; State => State of the Fields (0 = disabled, 1 = active, 2 = mandatory), FilterRepository => Regex which the repository name has to match to be displayed, FilterPackage => Regex which the package name has to match to be displayed, FilterBranch => Regex which the branch name has to match to be displayed, FilterRelease => Regex which the repelase version string has to match to be displayed.'} =
-        'Predefinisanje dinamičkog polja \'PackageDeprecated\': Group => grupa za pristup dinamičkim poljima; AlwaysVisible => polje može biti uklonjeno (0|1); InformationAreaName => naslov dodataka; InformationAreaSize => veličina i pozicija dodataka (Large|Small); Name => naziv dinamičkog polja; Priority => redosled dinamičkih polja; State => status polja (0 = onemogućeno, 1 = omogućeno, 2 = obavezno); FilterRepository => regularni izraz koji naziv skladišta mora da zadovoljava da bi polje bilo prikazano; FilterPackage => regularni izraz koje naziv paketa mora da zadovoljava da bi polje bilo prikazano; FilterBranch => regularni izraz koji naziv grane mora da zadovoljava da bi polje bilo prikazano; FilterRelease => regularni izraz koji verzija izdanja mora da zadovoljava da bi polje bilo prikazano.';
-    $Self->{Translation}->{'Recipients that will be informed by email in case of errors.'} =
-        '';
-    $Self->{Translation}->{'SSH Keys for Git Access'} = 'SSH ključevi za Git pristup';
-    $Self->{Translation}->{'Send analysis file'} = '';
-    $Self->{Translation}->{'Sets the git clone address to be used in repository listings.'} =
-        'Definiše adresu za Git kloniranje koja će biti korišćena u prikazu repozitorija.';
-    $Self->{Translation}->{'Sets the home directory for git repositories.'} = 'Definiše direktorijum za Git repozitorije.';
-    $Self->{Translation}->{'Sets the path for the BugzillaAddComment post receive script location.'} =
-        'Definiše putanju do BugzillaAddComment skripta.';
-    $Self->{Translation}->{'Sets the path for the OTRSCodePolicy  script location. It is recommended to have a separate clone of the OTRSCodePolicy module that is updated via cron.'} =
-        '';
-    $Self->{Translation}->{'Sets the path for the OTRSCodePolicy pre receive script location. It is recommended to have a separate clone of the OTRSCodePolicy module that is updated via cron.'} =
-        'Definiše putanju do OTRSCodePolicy skripta. Preporučeno je da postoji poseban klon OTRSCodePolicy modula koji se redovno osvežava putem cron.';
-    $Self->{Translation}->{'Show latest commits in git repositories.'} = '';
-    $Self->{Translation}->{'Shows a link in the menu to go create a unit test from the current ticket.'} =
-        '';
-    $Self->{Translation}->{'Synchronize OPMS tables with a remote database.'} = 'Sinhronizacija OPMS tabela sa udaljenom bazom.';
-    $Self->{Translation}->{'The minimum version of the sphinx library.'} = '';
-    $Self->{Translation}->{'The name of the sphinx theme to be used.'} = '';
-    $Self->{Translation}->{'The path to the OTRS CSS file (relative below the static path).'} =
-        '';
-    $Self->{Translation}->{'The path to the OTRS logo (relative below the static path).'} = '';
-    $Self->{Translation}->{'The path to the static folder, containing images and css files.'} =
-        '';
-    $Self->{Translation}->{'The path to the theme folder, containing the sphinx themes.'} = '';
-    $Self->{Translation}->{'This configuration defines all possible screens to enable or disable default columns.'} =
-        '';
-    $Self->{Translation}->{'This configuration defines all possible screens to enable or disable dynamic fields.'} =
-        '';
-    $Self->{Translation}->{'This configuration defines if only valids or all (invalids) dynamic fields should be shown.'} =
-        '';
-    $Self->{Translation}->{'This configuration defines if the OTRS package verification should be active or disabled. If disabled all packages are shown as verified. It\'s still recommended to use only verified packages.'} =
-        '';
-    $Self->{Translation}->{'This configuration defines the URL to the OTRS CloudService Proxy service. The http or https prefix will be added, depending on selection SysConfig \'Znuny4OTRSRepoType\'.'} =
-        '';
-    $Self->{Translation}->{'This configuration registers a Output post-filter to extend package verification.'} =
-        '';
-    $Self->{Translation}->{'This configuration registers an OutputFilter module that removes OTRS Business Solution TM advertisements.'} =
-        '';
-    $Self->{Translation}->{'This configuration registers an output filter to hide online repository selection in package manager.'} =
-        '';
-    $Self->{Translation}->{'Tidy unprocessed release that not passed test pomules checks for a long time.'} =
-        '';
-    $Self->{Translation}->{'Users who have rw permissions in one of these groups are permitted to execute force pushes \'git push --force\'.'} =
-        'Korisnici koji imaju rw dozvolu u jednoj od ovih grupa imaće mogućnost izvršavanja komande \'git push --force\'.';
-    $Self->{Translation}->{'Users who have rw permissions in one of these groups are permitted to manage projects. Additionally the members have administration permissions to the git management.'} =
-        'Korisnici koji imaju rw dozvolu u jednoj od ovih grupa imaće mogućnost upravljanja projektima. Dodatno pripadnici će imati administracione privilegije za Git upravljanje.';
+    $Self->{Translation}->{'If a note is added by an agent, sets the state of the ticket in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Ако је оператер додао напомену, подешава статус тикета на екрану главни/зависни тикета на детаљном приказу у интерфејсу оператера.';
+    $Self->{Translation}->{'Ignores not ticket related attributes.'} = '';
+    $Self->{Translation}->{'Master / Slave'} = 'Главни / зависни';
+    $Self->{Translation}->{'Master Tickets'} = 'Главни тикети';
+    $Self->{Translation}->{'MasterSlave'} = 'Главни/зависни';
+    $Self->{Translation}->{'MasterSlave module for Ticket Bulk feature.'} = 'Модул главни/зависни за функцију масовне обраде тикета.';
+    $Self->{Translation}->{'Parameters for the dashboard backend of the master tickets overview of the agent interface. "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin.'} =
+        'Параметри за додатак прегледа главних тикета контролне табле у интерфејсу оператера. "Limit" је број подразумевано приказаних тикета. "Group" се користи да ограничи приступ додатку (нпр. Group: admin;group1;group2;). "Default" одређује да ли је подразумевано активиран или да је потребно да га корисник мануелно активира. "CacheTTLLocal" је време у минутима за кеш додатка. ';
+    $Self->{Translation}->{'Parameters for the dashboard backend of the slave tickets overview of the agent interface. "Limit" is the number of entries shown by default. "Group" is used to restrict the access to the plugin (e. g. Group: admin;group1;group2;). "Default" determines if the plugin is enabled by default or if the user needs to enable it manually. "CacheTTLLocal" is the cache time in minutes for the plugin.'} =
+        'Параметри за додатак прегледа зависних тикета контролне табле у интерфејсу оператера. "Limit" је број подразумевано приказаних тикета. "Group" се користи да ограничи приступ додатку (нпр. Group: admin;group1;group2;). "Default" одређује да ли је подразумевано активиран или да је потребно да га корисник мануелно активира. "CacheTTLLocal" је време у минутима за кеш додатка. ';
+    $Self->{Translation}->{'Registration of the ticket event module.'} = 'Регистрација модула догађаја за тикете.';
+    $Self->{Translation}->{'Required permissions to use the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Неопходна дозвола за употребу главни/зависни екрана детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Sets if Master / Slave field must be selected by the agent.'} = 'Дефинише да ли поље Главни / Зависни мора бити подешено од стране оператера.';
+    $Self->{Translation}->{'Sets the default body text for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Одређује подразумевани садржај за напомене додате на на Главни/Зависни екрану детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Sets the default subject for notes added in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Одређује подразумевани предмет за напомене додате на Главни/Зависни екрану детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Sets the responsible agent of the ticket in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Одређује одговорног оператера за тикет на екрану главни/зависни  детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Sets the service in the ticket MasterSlave screen of a zoomed ticket in the agent interface (Ticket::Service needs to be activated).'} =
+        'Одређује сервис на главни/зависни екрану детаљног приказа тикета у интерфејсу оператера (Ticket::Service мора бити активиран).';
+    $Self->{Translation}->{'Sets the ticket owner in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Одређује власника тикета на главни/зависни екрану детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Sets the ticket type in the ticket MasterSlave screen of a zoomed ticket in the agent interface (Ticket::Type needs to be activated).'} =
+        'Одређује тип тикета на главни/зависни екрану детаљног приказа тикета у интерфејсу оператера (Ticket::Type мора бити активиран).';
+    $Self->{Translation}->{'Shows a link in the menu to change the MasterSlave status of a ticket in the ticket zoom view of the agent interface.'} =
+        'У менију приказује везу за измену главни/зависни статуса тикета на детаљном приказу тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Shows a list of all the involved agents on this ticket, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Приказује листу свих оператера укључених у овај тикет на главни/зависни екрану детаљног приказа тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Shows a list of all the possible agents (all agents with note permissions on the queue/ticket) to determine who should be informed about this note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Приказује листу свих могућих оператера (сви оператери са дозволом за напомену за ред/тикет) ради утврђивања ко треба да буде информисан о овој напомени, на главни/зависни екрану тикета на детаљном приказу тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Shows the ticket priority options in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Приказује опције приоритета тикета на екрану главни/зависни тикета на детаљном приказу тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Shows the title field in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
+        'Приказује насловна поља на екрану главни/зависни тикета у интерфејсу оператера.';
+    $Self->{Translation}->{'Slave Tickets'} = 'Зависни тикети';
+    $Self->{Translation}->{'Specifies the different article communication channels where the real name from Master ticket will be replaced with the one in the Slave ticket.'} =
+        'Наводи разне комуникационе канале чланака где ће стварно име са главног тикета бити замењено са једним на зависном тикету.';
+    $Self->{Translation}->{'This module activates Master/Slave field in new email and phone ticket screens.'} =
+        'Овај модул активира поље главни/зависни на екрану нових имејл тикета и тикета позива.';
+    $Self->{Translation}->{'This setting is deprecated and will be removed in further versions of MasterSlave.'} =
+        'Ово подешавање је застарело и биће избачено из будућих верзија модула главни/зависни.';
+    $Self->{Translation}->{'Ticket MasterSlave.'} = 'Тикет главни/зависни.';
 
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
