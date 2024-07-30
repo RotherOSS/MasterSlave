@@ -60,6 +60,8 @@ sub Data {
         'Azt az előzmény megjegyzést határozza meg a jegy mester-alárendelt képernyő műveleténél, amelyet a jegy előzményeinél szoktak használni az ügyintézői felületen.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Azt az előzmény típust határozza meg a jegy mester-alárendelt képernyő műveleténél, amelyet a jegy előzményeinél szoktak használni az ügyintézői felületen.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Meghatározza egy jegy következő állapotát egy jegyzet hozzáadása után egy nagyított jegynek a jegy mester-alárendelt képernyőjén az ügyintézői felületen.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Engedélyezi a funkció speciális mester-alárendelt részét.';

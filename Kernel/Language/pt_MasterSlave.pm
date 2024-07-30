@@ -60,6 +60,8 @@ sub Data {
         'Define o comentário de histórico para a ação de tela MasterSlave do ticket, que é utilizada para o histórico do ticket na interface de agente.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Define o tipo de histórico para a ação da tela MasterSlave do ticket, que é utilizado para o histórico do ticket na interface de agente.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Define o próximo estado de um ticket após uma nota ter sido adicionada, na tela MasterSlave de um ticket detalhado na interface de agente.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Habilita as funcionalidades avançadas do MasterSlave.';

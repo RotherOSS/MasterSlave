@@ -60,6 +60,8 @@ sub Data {
         'Одређује коментар за историјат на главни/зависни екранској акцији, што ће се користити за историјат у интерфејсу оператера.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Одређује тип историјата за главни/зависни екранску акцију, што ће се користити за историјат у интерфејсу оператера.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Одређује наредни статус тикета после додаваља белешке, на главни/зависни екрану детаљног приказа тикета у интерфејсу оператера.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Активира напредни део функције главни/зависни.';

@@ -60,6 +60,8 @@ sub Data {
         'Określa komentarz historii dla akcji zgłoszenia na ekranie Nadrzędny/Podrzędny który zostanie użyty w historii zgłoszenia interfejsu agenta.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Określa typ historii dla akcji zgłoszenia na ekranie Nadrzędny/Podrzędny który zostanie użyty w historii zgłoszenia interfejsu agenta.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Określa następny stan zgłoszenia po dodaniu notatki na ekranie Nadrzędny/Podrzędny w oknie szczegółów zgłoszenia interfejsu agenta.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Włącza zaawansowaną część funkcjonalności Nadrzędny/Podrzędny.';

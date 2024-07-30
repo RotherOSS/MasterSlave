@@ -60,6 +60,8 @@ sub Data {
         'Задает текст комментария в записи истории при вызове MasterSlave экрана , в интерфейсе агента.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Задает тип записи истории при вызове MasterSlave экрана , в интерфейсе агента.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Задает следующее состояние для заявки после добавления заметки на экране MasterSlave заявки при ее просмотре в интерфейсе агента.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Включает расширенные возможности для MasterSlave.';

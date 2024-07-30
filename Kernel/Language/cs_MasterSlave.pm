@@ -60,6 +60,8 @@ sub Data {
         'Určuje komentář historie pro akci zobrazení Nadřízený / Podřízený, komentář je použit v historii tiketu v rozhraní agenta.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Určuje typ historie pro akci zobrazení Nadřízený / Podřízený, typ je použit v historii tiketu v rozhraní agenta.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Určuje další stav tiketu po přidání poznámky v zobrazení Nadřízený / Podřízený v detailu tiketu v rozhraní agenta.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = '';

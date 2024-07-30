@@ -60,6 +60,8 @@ sub Data {
         'Mentakrifkan komen sejarah bagi kesan skrin MasterSlave tiket, yang akan digunakan untuk sejarah tiket dalam antara muka ejen.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Mentakrifkan jenis sejarah bagi tindakan skrin tiket MasterSlave, yang akan digunakan untuk sejarah tiket dalam antara muka ejen.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Mentakrifkan keadaan seterusnya bagi tiket selepas menambah nota, dalam skrin MasterSlave tiket tiket dizum dalam antara muka ejen.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = '';

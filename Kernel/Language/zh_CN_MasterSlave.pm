@@ -60,6 +60,8 @@ sub Data {
         '定义工单主从设置窗口操作的历史注释，以用于服务人员界面的工单历史。';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         '定义工单主从设置窗口操作的历史类型，以用于服务人员界面的工单历史。';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         '定义服务人员界面在工单主从设置窗口添加备注后的下一个工单状态。';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = '启用主从功能的高级模式。';

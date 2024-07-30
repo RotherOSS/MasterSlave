@@ -60,6 +60,8 @@ sub Data {
         'Inafafanua historia ya maoni kwa kitendo cha skrini ya tiketi mkuumtumwa, ambayo inatumika na historia ya tiketi ya kiolesura cha wakala.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Fafanua aina ya historia kwa kitendo cha skrini ya mkuumtumwa cha tiketi, ambacho kinatumika na historia ya tiketi katika kiolesura cha wakala.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Fafanua hali inayofuata ya tiketi baada ya kuongeza kidokezo, katika skrini ya mkuumtumwa ya tiketi ya tiketi iliyokuzwa katika kiolesura cha wakala.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = '';

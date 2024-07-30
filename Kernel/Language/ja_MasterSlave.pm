@@ -60,6 +60,8 @@ sub Data {
         '担当者インタフェースのチケット履歴で使用される、チケット・マスター・スレーブ画面アクションに関する履歴コメントを定義します。';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         '担当者インタフェースのチケット履歴で使用される、チケット・マスター・スレーブ画面アクションに関する履歴タイプを定義します。';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         '担当者インターフェイスのズームされたチケットのチケットマスタースレーブ画面で、メモを追加した後のチケットの次の状態を定義します。';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = '機能の高度なマスタースレーブ部分を有効にします。';

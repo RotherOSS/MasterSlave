@@ -60,6 +60,8 @@ sub Data {
         'Definisce il commento cronologico per l\'azione sullo schermo MasterSlave del ticket, che viene utilizzato per la cronologia dei ticket nell\'interfaccia agenti.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Definisce il tipo di cronologia per l\'azione della schermata MasterSlave del ticket, che viene utilizzata per la cronologia dei ticket nell\'interfaccia agenti.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Definisce lo stato successivo di un ticket dopo aver aggiunto una nota, nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia dell\'interfaccia agenti.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Abilita la parte avanzata di MasterSlave della funzione.';

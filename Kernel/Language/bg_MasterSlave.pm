@@ -60,6 +60,8 @@ sub Data {
         'Дефинира коментара на историята за действието на екрана MasterSlave на билет, който се използва за хронология на билет в интерфейса на агента.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Дефинира типа история за действието на екрана MasterSlave на билета, което се използва за хронология на билети в интерфейса на агента.';
+    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
+        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Дефинира следващото състояние на билет след добавяне на бележка в екрана MasterSlave на билета за ескалиран билет в интерфейса на агента.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Активира разширената MasterSlave част от функцията.';
