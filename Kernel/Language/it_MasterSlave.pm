@@ -50,22 +50,18 @@ sub Data {
     $Self->{Translation}->{'Defines dynamic field name for master ticket feature.'} = 'Definisce il nome del campo dinamico per la funzione ticket principale.';
     $Self->{Translation}->{'Defines if a ticket lock is required in the ticket MasterSlave screen of a zoomed ticket in the agent interface (if the ticket isn\'t locked yet, the ticket gets locked and the current agent will be set automatically as its owner).'} =
         'Definisce se è necessario un blocco ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti (se il ticket non è ancora bloccato, il ticket viene bloccato e l\'agente corrente verrà impostato automaticamente come proprietario).';
-    $Self->{Translation}->{'Defines if parent-child translations for queues and services should be generated automatically.'} =
-        '';
     $Self->{Translation}->{'Defines if the MasterSlave note is visible for the customer by default.'} =
         'Definisce se la nota MasterSlave è visibile per il cliente per impostazione predefinita.';
     $Self->{Translation}->{'Defines the default next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Definisce lo stato successivo predefinito di un ticket dopo aver aggiunto una nota, nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia agenti.';
     $Self->{Translation}->{'Defines the default ticket priority in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Definisce la priorità predefinita del ticket nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia dell\'interfaccia agenti.';
+    $Self->{Translation}->{'Defines the height for the rich text editor component for this screen. Enter number (pixels) or percent value (relative).'} =
+        '';
     $Self->{Translation}->{'Defines the history comment for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Definisce il commento cronologico per l\'azione sullo schermo MasterSlave del ticket, che viene utilizzato per la cronologia dei ticket nell\'interfaccia agenti.';
     $Self->{Translation}->{'Defines the history type for the ticket MasterSlave screen action, which gets used for ticket history in the agent interface.'} =
         'Definisce il tipo di cronologia per l\'azione della schermata MasterSlave del ticket, che viene utilizzata per la cronologia dei ticket nell\'interfaccia agenti.';
-    $Self->{Translation}->{'Defines the initial height for the rich text editor component in pixels.'} =
-        '';
-    $Self->{Translation}->{'Defines the initial height in pixels for the rich text editor component for this screen.'} =
-        '';
     $Self->{Translation}->{'Defines the next state of a ticket after adding a note, in the ticket MasterSlave screen of a zoomed ticket in the agent interface.'} =
         'Definisce lo stato successivo di un ticket dopo aver aggiunto una nota, nella schermata MasterSlave del ticket di un ticket ingrandito nell\'interfaccia dell\'interfaccia agenti.';
     $Self->{Translation}->{'Enables the advanced MasterSlave part of the feature.'} = 'Abilita la parte avanzata di MasterSlave della funzione.';
