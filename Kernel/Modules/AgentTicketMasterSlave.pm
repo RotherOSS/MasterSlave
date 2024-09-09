@@ -1604,6 +1604,7 @@ sub Run {
                     $StdFieldValues{ $Check{ $Field->{FieldID} } } = $Field->{Method}->(
                         $Self,
                         %GetParam,
+                        TicketID       => $Self->{TicketID},
                         CustomerUserID => $CustomerUser || '',
                         StateID        => $GetParam{NextStateID},
                     );
@@ -2274,6 +2275,7 @@ sub Run {
                     $StdFieldValues{ $Check{ $Field->{FieldID} } } = $Field->{Method}->(
                         $Self,
                         %GetParam,
+                        TicketID       => $Self->{TicketID},
                         CustomerUserID => $CustomerUser || '',
                         StateID        => $GetParam{NextStateID},
                     );
@@ -2459,8 +2461,6 @@ sub _Mask {
 
     # get layout object
     my $LayoutObject = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
-
-    my $DynamicFieldObject = $Kernel::OM->Get('Kernel::System::DynamicField');
 
     # render ticket type dynamic fields
     my $TicketTypeDynamicFieldHTML = $Kernel::OM->Get('Kernel::Output::HTML::DynamicField::Mask')->EditSectionRender(
