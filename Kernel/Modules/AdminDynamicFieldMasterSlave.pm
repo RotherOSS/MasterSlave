@@ -37,6 +37,9 @@ sub new {
 
     my $Self = bless {%Param}, $Type;
 
+    # Some setup
+    $Self->{TemplateFile} = 'AdminDynamicFieldMasterSlave';
+
     return $Self;
 }
 
